@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vercel — DESIGN.md rendered</title>
+<style>
+:root{
+  --demo-ink:#171717; --demo-canvas:#fafafa; --demo-mute:#8f8f8f; --demo-accent:#4d4d4d;
+  --hairline:#e2e2e2; --hairline-soft:#eeeeee;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--demo-canvas);color:var(--demo-ink);font-family:"Helvetica Neue",Arial,sans-serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 120px;}
+.page-head{margin-bottom:48px;}
+.eyebrow{font:600 12px/1.5 inherit;letter-spacing:.08em;text-transform:uppercase;color:var(--demo-mute);margin:0 0 8px;}
+h1.title{font-family:Georgia, "Times New Roman", serif;font-size:48px;font-weight:600;line-height:48px;text-transform:none;margin:0 0 12px;color:var(--demo-ink);}
+.dek{max-width:640px;color:var(--demo-mute);font-size:15px;line-height:1.55;margin:0;}
+.source-note{margin-top:16px;font-size:12px;color:var(--demo-mute);opacity:.7;}
+nav.toc{display:flex;flex-wrap:wrap;gap:0 24px;margin:32px 0 0;padding:16px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+nav.toc a{color:var(--demo-ink);font:500 14px/1.5 inherit;text-decoration:none;border-bottom:1px solid transparent;}
+nav.toc a:hover{border-bottom-color:var(--demo-ink);}
+section{margin-top:48px;}
+h2.sec-title{font-weight:700;font-size:26px;line-height:1.2;margin:0 0 4px;color:var(--demo-ink);}
+p.sec-sub{color:var(--demo-mute);font-size:13px;margin:0 0 20px;}
+.empty{color:var(--demo-mute);font-size:13px;font-style:italic;}
+
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+.swatch{border:1px solid var(--hairline-soft);}
+.swatch-fill{height:64px;}
+.swatch-meta{padding:8px 10px;}
+.swatch-name{font:500 12px/1.5 inherit;}
+.swatch-hex{font:500 11px/1.5 monospace;color:var(--demo-mute);}
+
+.type-row{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--hairline-soft);}
+.type-row:last-child{border-bottom:none;}
+.type-token{font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+.type-token span{display:block;font:400 10px inherit;color:var(--demo-mute);opacity:.7;margin-top:4px;}
+
+.scale-row{display:flex;align-items:center;gap:16px;margin-bottom:8px;font:500 12px monospace;}
+.scale-bar{background:var(--demo-ink);height:14px;}
+.scale-label{width:100px;color:var(--demo-mute);}
+.scale-val{width:60px;}
+
+.radius-grid{display:flex;gap:20px;flex-wrap:wrap;}
+.radius-item{text-align:center;font:500 11px monospace;color:var(--demo-mute);}
+.radius-box{width:64px;height:64px;background:#f2f2f2;border:1px solid var(--hairline);margin-bottom:8px;}
+
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;}
+.comp-cell{text-align:center;}
+.comp-demo{max-width:100%;}
+.comp-label{margin-top:8px;font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+
+footer.pf{margin-top:80px;padding-top:24px;border-top:1px solid var(--hairline);font:700 10px/1.6 inherit;color:var(--demo-mute);letter-spacing:.05em;text-transform:uppercase;}
+@media(max-width:640px){ .type-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="page-head">
+    <p class="eyebrow">Design system</p>
+    <h1 class="title">Vercel</h1>
+    <p class="dek">An analysis of Vercel&#x27;s design language — the Geist system, a stark black-on-near-white developer-platform aesthetic where a single ink tone carries every heading, CTA, and border, and the only color the page allows itself is a multi-stop mesh gradient (cyan / blue / violet / magenta / amber) confined to the hero. Geist Sans drives tightly-tracked display type, Geist Mono labels the technical eyebrows, and pill-shaped black buttons mark the marketing CTAs while 6px square buttons handle app and nav chrome.</p>
+    <p class="source-note">Source: getdesign.md/design-md/vercel/DESIGN.md · rendered as an unofficial static reference for readability, not affiliated with Vercel.</p>
+  </div>
+  <nav class="toc">
+    <a href="#colors">Colors</a>
+    <a href="#type">Typography</a>
+    <a href="#spacing">Spacing</a>
+    <a href="#radius">Radius</a>
+    <a href="#components">Components</a>
+    <a href="index.html">← All brands</a>
+  </nav>
+
+  <section id="colors">
+    <h2 class="sec-title">Colors</h2>
+    <p class="sec-sub">Every color token in the spec, rendered as a swatch.</p>
+    <div class="swatch-grid"><div class="swatch">
+          <div class="swatch-fill" style="background:#171717;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary</div><div class="swatch-hex">#171717</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-primary</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#171717;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#171717</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#4d4d4d;"></div>
+          <div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#4d4d4d</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#8f8f8f;"></div>
+          <div class="swatch-meta"><div class="swatch-name">mute</div><div class="swatch-hex">#8f8f8f</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#a1a1a1;"></div>
+          <div class="swatch-meta"><div class="swatch-name">faint</div><div class="swatch-hex">#a1a1a1</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ebebeb;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#ebebeb</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f2f2f2;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-soft</div><div class="swatch-hex">#f2f2f2</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fafafa;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#fafafa</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas-elevated</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0070f3;"></div>
+          <div class="swatch-meta"><div class="swatch-name">link</div><div class="swatch-hex">#0070f3</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0761d1;"></div>
+          <div class="swatch-meta"><div class="swatch-name">link-deep</div><div class="swatch-hex">#0761d1</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#d3e5ff;"></div>
+          <div class="swatch-meta"><div class="swatch-name">link-soft</div><div class="swatch-hex">#d3e5ff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ee0000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">error</div><div class="swatch-hex">#ee0000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#c50000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">error-deep</div><div class="swatch-hex">#c50000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f5a623;"></div>
+          <div class="swatch-meta"><div class="swatch-name">warning</div><div class="swatch-hex">#f5a623</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffefcf;"></div>
+          <div class="swatch-meta"><div class="swatch-name">warning-soft</div><div class="swatch-hex">#ffefcf</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ab570a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">warning-deep</div><div class="swatch-hex">#ab570a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#7928ca;"></div>
+          <div class="swatch-meta"><div class="swatch-name">violet</div><div class="swatch-hex">#7928ca</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#d8ccf1;"></div>
+          <div class="swatch-meta"><div class="swatch-name">violet-soft</div><div class="swatch-hex">#d8ccf1</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#50e3c2;"></div>
+          <div class="swatch-meta"><div class="swatch-name">cyan</div><div class="swatch-hex">#50e3c2</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#aaffec;"></div>
+          <div class="swatch-meta"><div class="swatch-name">cyan-soft</div><div class="swatch-hex">#aaffec</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ff0080;"></div>
+          <div class="swatch-meta"><div class="swatch-name">pink</div><div class="swatch-hex">#ff0080</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#eb367f;"></div>
+          <div class="swatch-meta"><div class="swatch-name">magenta</div><div class="swatch-hex">#eb367f</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#007cf0;"></div>
+          <div class="swatch-meta"><div class="swatch-name">gradient-develop-start</div><div class="swatch-hex">#007cf0</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#00dfd8;"></div>
+          <div class="swatch-meta"><div class="swatch-name">gradient-develop-end</div><div class="swatch-hex">#00dfd8</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#7928ca;"></div>
+          <div class="swatch-meta"><div class="swatch-name">gradient-preview-start</div><div class="swatch-hex">#7928ca</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ff0080;"></div>
+          <div class="swatch-meta"><div class="swatch-name">gradient-preview-end</div><div class="swatch-hex">#ff0080</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ff4d4d;"></div>
+          <div class="swatch-meta"><div class="swatch-name">gradient-ship-start</div><div class="swatch-hex">#ff4d4d</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f9cb28;"></div>
+          <div class="swatch-meta"><div class="swatch-name">gradient-ship-end</div><div class="swatch-hex">#f9cb28</div></div>
+        </div></div>
+  </section>
+
+  <section id="type">
+    <h2 class="sec-title">Typography</h2>
+    <p class="sec-sub">Each type token rendered at its real size, weight, and line height.</p>
+    <div class="type-row">
+          <div class="type-token">display-xl<span>48px/600/48px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:48px;font-weight:600;line-height:48px;letter-spacing:-2.4px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Vercel</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-lg<span>32px/600/40px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:32px;font-weight:600;line-height:40px;letter-spacing:-1.28px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-md<span>20px/600/28px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:20px;font-weight:600;line-height:28px;letter-spacing:-0.4px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">label-sm<span>14px/500 burada komikledin mi yani son DESIGN.md&#x27;leri?/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500 burada komikledin mi yani son DESIGN.md'leri?;line-height:20px;letter-spacing:-0.28px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">mono-eyebrow<span>12px/500/16px</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:12px;font-weight:500;line-height:16px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">body-lg<span>16px/400/24px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;line-height:24px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md<span>14px/400/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;line-height:20px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm<span>12px/400/16px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:12px;font-weight:400;line-height:16px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Vercel</p>
+        </div><div class="type-row">
+          <div class="type-token">button-lg<span>16px/500/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;line-height:20px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">button-md<span>14px/500/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;line-height:20px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">code<span>14px/400/20px</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:14px;font-weight:400;line-height:20px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div>
+  </section>
+
+  <section id="spacing">
+    <h2 class="sec-title">Spacing</h2>
+    <p class="sec-sub">The spacing scale, drawn to relative width.</p>
+    <div class="scale-row"><span class="scale-label">xxs</span><span class="scale-val">4px</span><div class="scale-bar" style="width:4.0px"></div></div><div class="scale-row"><span class="scale-label">xs</span><span class="scale-val">8px</span><div class="scale-bar" style="width:8.0px"></div></div><div class="scale-row"><span class="scale-label">sm</span><span class="scale-val">12px</span><div class="scale-bar" style="width:12.0px"></div></div><div class="scale-row"><span class="scale-label">md</span><span class="scale-val">16px</span><div class="scale-bar" style="width:16.0px"></div></div><div class="scale-row"><span class="scale-label">lg</span><span class="scale-val">24px</span><div class="scale-bar" style="width:24.0px"></div></div><div class="scale-row"><span class="scale-label">xl</span><span class="scale-val">32px</span><div class="scale-bar" style="width:32.0px"></div></div><div class="scale-row"><span class="scale-label">2xl</span><span class="scale-val">40px</span><div class="scale-bar" style="width:40.0px"></div></div><div class="scale-row"><span class="scale-label">3xl</span><span class="scale-val">64px</span><div class="scale-bar" style="width:64.0px"></div></div><div class="scale-row"><span class="scale-label">4xl</span><span class="scale-val">96px</span><div class="scale-bar" style="width:96.0px"></div></div><div class="scale-row"><span class="scale-label">section</span><span class="scale-val">128px</span><div class="scale-bar" style="width:128.0px"></div></div>
+  </section>
+
+  <section id="radius">
+    <h2 class="sec-title">Radius</h2>
+    <p class="sec-sub">Corner-radius tokens applied to a reference box.</p>
+    <div class="radius-grid"><div class="radius-item"><div class="radius-box" style="border-radius:0px"></div>none · 0px</div><div class="radius-item"><div class="radius-box" style="border-radius:6px"></div>sm · 6px</div><div class="radius-item"><div class="radius-box" style="border-radius:12px"></div>md · 12px</div><div class="radius-item"><div class="radius-box" style="border-radius:16px"></div>lg · 16px</div><div class="radius-item"><div class="radius-box" style="border-radius:64px"></div>pill-category · 64px</div><div class="radius-item"><div class="radius-box" style="border-radius:100px"></div>pill · 100px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>full · 9999px</div></div>
+  </section>
+
+  <section id="components">
+    <h2 class="sec-title">Components</h2>
+    <p class="sec-sub">Documented components with tokens resolved to real color / type / radius / spacing.</p>
+    <div class="comp-grid"><div class="comp-cell">
+          <div class="comp-demo" style="background:#fafafa;color:#4d4d4d;border-radius:0px;padding:{spacing.sm} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">nav-bar</div>
+          <div class="comp-label">nav-bar</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#4d4d4d;border-radius:9999px;padding:{spacing.xs} {spacing.sm};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">nav-link</div>
+          <div class="comp-label">nav-link</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#171717;color:#ffffff;border-radius:100px;padding:0px 14px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary</div>
+          <div class="comp-label">button-primary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:100px;padding:0px 14px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-secondary</div>
+          <div class="comp-label">button-secondary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#171717;color:#ffffff;border-radius:6px;padding:0px 6px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary-sm</div>
+          <div class="comp-label">button-primary-sm</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:6px;padding:0px 6px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-ghost-sm</div>
+          <div class="comp-label">button-ghost-sm</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:64px;padding:0px 16px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-category-pill</div>
+          <div class="comp-label">button-category-pill</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:9999px;padding:0px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-icon-circular</div>
+          <div class="comp-label">button-icon-circular</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:6px;padding:{spacing.xs} {spacing.sm};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">text-input</div>
+          <div class="comp-label">text-input</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:12px;padding:{spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">feature-card</div>
+          <div class="comp-label">feature-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:12px;padding:{spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">feature-card-elevated</div>
+          <div class="comp-label">feature-card-elevated</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:16px;padding:{spacing.xl};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">pricing-card</div>
+          <div class="comp-label">pricing-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:12px;padding:{spacing.md};font-family:"SF Mono", "Courier New", monospace;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">code-block</div>
+          <div class="comp-label">code-block</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fafafa;color:#8f8f8f;border-radius:0px;padding:{spacing.xl} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">logo-strip</div>
+          <div class="comp-label">logo-strip</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fafafa;color:#171717;border-radius:0px;padding:{spacing.section} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:48px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-band</div>
+          <div class="comp-label">hero-band</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fafafa;color:#171717;border-radius:0px;padding:{spacing.4xl} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:48px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">cta-band</div>
+          <div class="comp-label">cta-band</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fafafa;color:#4d4d4d;border-radius:0px;padding:{spacing.3xl} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer</div>
+          <div class="comp-label">footer</div>
+        </div></div>
+  </section>
+
+  <footer class="pf">Vercel design system analysis · rendered from DESIGN.md · independent, unofficial</footer>
+</div>
+</body>
+</html>

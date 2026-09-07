@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Uber — DESIGN.md rendered</title>
+<style>
+:root{
+  --demo-ink:#000000; --demo-canvas:#ffffff; --demo-mute:#afafaf; --demo-accent:#5e5e5e;
+  --hairline:#e2e2e2; --hairline-soft:#eeeeee;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--demo-canvas);color:var(--demo-ink);font-family:"Helvetica Neue",Arial,sans-serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 120px;}
+.page-head{margin-bottom:48px;}
+.eyebrow{font:600 12px/1.5 inherit;letter-spacing:.08em;text-transform:uppercase;color:var(--demo-mute);margin:0 0 8px;}
+h1.title{font-family:Georgia, "Times New Roman", serif;font-size:52px;font-weight:700;line-height:64px;text-transform:none;margin:0 0 12px;color:var(--demo-ink);}
+.dek{max-width:640px;color:var(--demo-mute);font-size:15px;line-height:1.55;margin:0;}
+.source-note{margin-top:16px;font-size:12px;color:var(--demo-mute);opacity:.7;}
+nav.toc{display:flex;flex-wrap:wrap;gap:0 24px;margin:32px 0 0;padding:16px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+nav.toc a{color:var(--demo-ink);font:500 14px/1.5 inherit;text-decoration:none;border-bottom:1px solid transparent;}
+nav.toc a:hover{border-bottom-color:var(--demo-ink);}
+section{margin-top:48px;}
+h2.sec-title{font-weight:700;font-size:26px;line-height:1.2;margin:0 0 4px;color:var(--demo-ink);}
+p.sec-sub{color:var(--demo-mute);font-size:13px;margin:0 0 20px;}
+.empty{color:var(--demo-mute);font-size:13px;font-style:italic;}
+
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+.swatch{border:1px solid var(--hairline-soft);}
+.swatch-fill{height:64px;}
+.swatch-meta{padding:8px 10px;}
+.swatch-name{font:500 12px/1.5 inherit;}
+.swatch-hex{font:500 11px/1.5 monospace;color:var(--demo-mute);}
+
+.type-row{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--hairline-soft);}
+.type-row:last-child{border-bottom:none;}
+.type-token{font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+.type-token span{display:block;font:400 10px inherit;color:var(--demo-mute);opacity:.7;margin-top:4px;}
+
+.scale-row{display:flex;align-items:center;gap:16px;margin-bottom:8px;font:500 12px monospace;}
+.scale-bar{background:var(--demo-ink);height:14px;}
+.scale-label{width:100px;color:var(--demo-mute);}
+.scale-val{width:60px;}
+
+.radius-grid{display:flex;gap:20px;flex-wrap:wrap;}
+.radius-item{text-align:center;font:500 11px monospace;color:var(--demo-mute);}
+.radius-box{width:64px;height:64px;background:#f2f2f2;border:1px solid var(--hairline);margin-bottom:8px;}
+
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;}
+.comp-cell{text-align:center;}
+.comp-demo{max-width:100%;}
+.comp-label{margin-top:8px;font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+
+footer.pf{margin-top:80px;padding-top:24px;border-top:1px solid var(--hairline);font:700 10px/1.6 inherit;color:var(--demo-mute);letter-spacing:.05em;text-transform:uppercase;}
+@media(max-width:640px){ .type-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="page-head">
+    <p class="eyebrow">Design system</p>
+    <h1 class="title">Uber</h1>
+    <p class="dek">An inspired interpretation of Uber&#x27;s design language — a transportation-and-delivery super-app brand whose web surface is a black-and-white duet, framed by a custom geometric display sans, accented by a single signature pill shape (radius 999px) on every interactive element, and decorated only by editorial 4:3 illustrations of riders, drivers, and city objects.</p>
+    <p class="source-note">Source: getdesign.md/design-md/uber/DESIGN.md · rendered as an unofficial static reference for readability, not affiliated with Uber.</p>
+  </div>
+  <nav class="toc">
+    <a href="#colors">Colors</a>
+    <a href="#type">Typography</a>
+    <a href="#spacing">Spacing</a>
+    <a href="#radius">Radius</a>
+    <a href="#components">Components</a>
+    <a href="index.html">← All brands</a>
+  </nav>
+
+  <section id="colors">
+    <h2 class="sec-title">Colors</h2>
+    <p class="sec-sub">Every color token in the spec, rendered as a swatch.</p>
+    <div class="swatch-grid"><div class="swatch">
+          <div class="swatch-fill" style="background:#000000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary</div><div class="swatch-hex">#000000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-primary</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#000000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#000000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#5e5e5e;"></div>
+          <div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#5e5e5e</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#afafaf;"></div>
+          <div class="swatch-meta"><div class="swatch-name">mute</div><div class="swatch-hex">#afafaf</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#4b4b4b;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-mid</div><div class="swatch-hex">#4b4b4b</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#efefef;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas-soft</div><div class="swatch-hex">#efefef</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f3f3f3;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas-softer</div><div class="swatch-hex">#f3f3f3</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#e2e2e2;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-pressed</div><div class="swatch-hex">#e2e2e2</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0000ee;"></div>
+          <div class="swatch-meta"><div class="swatch-name">link</div><div class="swatch-hex">#0000ee</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#282828;"></div>
+          <div class="swatch-meta"><div class="swatch-name">black-elevated</div><div class="swatch-hex">#282828</div></div>
+        </div></div>
+  </section>
+
+  <section id="type">
+    <h2 class="sec-title">Typography</h2>
+    <p class="sec-sub">Each type token rendered at its real size, weight, and line height.</p>
+    <div class="type-row">
+          <div class="type-token">display-xxl<span>52px/700/64px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:52px;font-weight:700;line-height:64px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Uber</p>
+        </div><div class="type-row">
+          <div class="type-token">display-xl<span>36px/700/44px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:36px;font-weight:700;line-height:44px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">display-lg<span>32px/700/40px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:32px;font-weight:700;line-height:40px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">display-md<span>24px/700/32px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:24px;font-weight:700;line-height:32px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">display-sm<span>20px/700/28px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:20px;font-weight:700;line-height:28px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">body-lg<span>18px/500/24px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:500;line-height:24px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md<span>16px/400/24px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;line-height:24px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md-strong<span>16px/500/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;line-height:20px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Uber</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm<span>14px/400/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;line-height:20px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm-strong<span>14px/500/16px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;line-height:16px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">caption<span>12px/400/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:12px;font-weight:400;line-height:20px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">button-large<span>18px/500/24px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:500;line-height:24px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">button-md<span>16px/500/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;line-height:20px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div>
+  </section>
+
+  <section id="spacing">
+    <h2 class="sec-title">Spacing</h2>
+    <p class="sec-sub">The spacing scale, drawn to relative width.</p>
+    <div class="scale-row"><span class="scale-label">xxs</span><span class="scale-val">4px</span><div class="scale-bar" style="width:4.0px"></div></div><div class="scale-row"><span class="scale-label">xs</span><span class="scale-val">6px</span><div class="scale-bar" style="width:6.0px"></div></div><div class="scale-row"><span class="scale-label">sm</span><span class="scale-val">8px</span><div class="scale-bar" style="width:8.0px"></div></div><div class="scale-row"><span class="scale-label">md</span><span class="scale-val">12px</span><div class="scale-bar" style="width:12.0px"></div></div><div class="scale-row"><span class="scale-label">lg</span><span class="scale-val">16px</span><div class="scale-bar" style="width:16.0px"></div></div><div class="scale-row"><span class="scale-label">xl</span><span class="scale-val">20px</span><div class="scale-bar" style="width:20.0px"></div></div><div class="scale-row"><span class="scale-label">2xl</span><span class="scale-val">24px</span><div class="scale-bar" style="width:24.0px"></div></div><div class="scale-row"><span class="scale-label">3xl</span><span class="scale-val">32px</span><div class="scale-bar" style="width:32.0px"></div></div>
+  </section>
+
+  <section id="radius">
+    <h2 class="sec-title">Radius</h2>
+    <p class="sec-sub">Corner-radius tokens applied to a reference box.</p>
+    <div class="radius-grid"><div class="radius-item"><div class="radius-box" style="border-radius:0px"></div>none · 0px</div><div class="radius-item"><div class="radius-box" style="border-radius:8px"></div>md · 8px</div><div class="radius-item"><div class="radius-box" style="border-radius:12px"></div>lg · 12px</div><div class="radius-item"><div class="radius-box" style="border-radius:16px"></div>xl · 16px</div><div class="radius-item"><div class="radius-box" style="border-radius:999px"></div>pill · 999px</div><div class="radius-item"><div class="radius-box" style="border-radius:36px"></div>pill-tab · 36px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>full · 9999px</div></div>
+  </section>
+
+  <section id="components">
+    <h2 class="sec-title">Components</h2>
+    <p class="sec-sub">Documented components with tokens resolved to real color / type / radius / spacing.</p>
+    <div class="comp-grid"><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:0px;padding:{spacing.lg} {spacing.3xl};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">nav-bar</div>
+          <div class="comp-label">nav-bar</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#000000;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">nav-link</div>
+          <div class="comp-label">nav-link</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:999px;padding:{spacing.md} {spacing.md};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary</div>
+          <div class="comp-label">button-primary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:999px;padding:{spacing.md} {spacing.md};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-secondary</div>
+          <div class="comp-label">button-secondary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#000000;border-radius:999px;padding:{spacing.md} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-subtle</div>
+          <div class="comp-label">button-subtle</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:999px;padding:{spacing.md};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-floating</div>
+          <div class="comp-label">button-floating</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:16px;padding:{spacing.lg} {spacing.xl};font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-large-rounded</div>
+          <div class="comp-label">button-large-rounded</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:36px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-tab-translucent</div>
+          <div class="comp-label">button-tab-translucent</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#000000;border-radius:0px;padding:{spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">text-input</div>
+          <div class="comp-label">text-input</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f3f3f3;color:#000000;border-radius:0px;padding:{spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">text-input-on-soft</div>
+          <div class="comp-label">text-input-on-soft</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:16px;padding:{spacing.2xl};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-content</div>
+          <div class="comp-label">card-content</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:16px;padding:{spacing.2xl};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-elevated</div>
+          <div class="comp-label">card-elevated</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#000000;border-radius:16px;padding:{spacing.2xl};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-soft-tinted</div>
+          <div class="comp-label">card-soft-tinted</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:16px;padding:{spacing.2xl};font-family:Georgia, "Times New Roman", serif;font-size:24px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">promo-card-illustrated</div>
+          <div class="comp-label">promo-card-illustrated</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:16px;padding:{spacing.2xl};font-family:Georgia, "Times New Roman", serif;font-size:24px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">promo-card-on-dark</div>
+          <div class="comp-label">promo-card-on-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:16px;padding:{spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">request-form-card</div>
+          <div class="comp-label">request-form-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#000000;border-radius:0px;padding:{spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">request-form-input-row</div>
+          <div class="comp-label">request-form-input-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#000000;border-radius:999px;padding:{spacing.sm} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">category-button</div>
+          <div class="comp-label">category-button</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:0px;padding:{spacing.lg} 0;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">faq-row</div>
+          <div class="comp-label">faq-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:999px;padding:{spacing.md} {spacing.xl};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">app-download-pill</div>
+          <div class="comp-label">app-download-pill</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:0px;padding:{spacing.3xl} {spacing.3xl};font-family:Georgia, "Times New Roman", serif;font-size:52px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-band-light</div>
+          <div class="comp-label">hero-band-light</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:0px;padding:{spacing.3xl} {spacing.3xl};font-family:Georgia, "Times New Roman", serif;font-size:52px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-band-dark</div>
+          <div class="comp-label">hero-band-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:16px;padding:{spacing.3xl};font-family:Georgia, "Times New Roman", serif;font-size:52px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">showcase-image-card</div>
+          <div class="comp-label">showcase-image-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#0000ee;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">link-blue</div>
+          <div class="comp-label">link-blue</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#ffffff;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">link-on-dark</div>
+          <div class="comp-label">link-on-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#4b4b4b;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">link-mute</div>
+          <div class="comp-label">link-mute</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#afafaf;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">link-mute-soft</div>
+          <div class="comp-label">link-mute-soft</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#000000;border-radius:9999px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">icon-button-circular</div>
+          <div class="comp-label">icon-button-circular</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:0px;padding:{spacing.3xl} {spacing.3xl};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer</div>
+          <div class="comp-label">footer</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#000000;border-radius:16px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-pricing-tier</div>
+          <div class="comp-label">ex-pricing-tier</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:16px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-pricing-tier-featured</div>
+          <div class="comp-label">ex-pricing-tier-featured</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#111111;border-radius:0px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-product-selector</div>
+          <div class="comp-label">ex-product-selector</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:16px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-cart-drawer</div>
+          <div class="comp-label">ex-cart-drawer</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:8px;padding:{spacing.md} {spacing.lg};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-app-shell-row</div>
+          <div class="comp-label">ex-app-shell-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#111111;border-radius:0px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-data-table-cell</div>
+          <div class="comp-label">ex-data-table-cell</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#111111;border-radius:16px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-auth-form-card</div>
+          <div class="comp-label">ex-auth-form-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:16px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-modal-card</div>
+          <div class="comp-label">ex-modal-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#efefef;color:#111111;border-radius:16px;padding:{spacing.3xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-empty-state-card</div>
+          <div class="comp-label">ex-empty-state-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:16px;padding:{spacing.md} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-toast</div>
+          <div class="comp-label">ex-toast</div>
+        </div></div>
+  </section>
+
+  <footer class="pf">Uber design system analysis · rendered from DESIGN.md · independent, unofficial</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mistral Ai — DESIGN.md rendered</title>
+<style>
+:root{
+  --demo-ink:#1f1f1f; --demo-canvas:#ffffff; --demo-mute:#a8a8a8; --demo-accent:#cc3a05;
+  --hairline:#e2e2e2; --hairline-soft:#eeeeee;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--demo-canvas);color:var(--demo-ink);font-family:"Helvetica Neue",Arial,sans-serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 120px;}
+.page-head{margin-bottom:48px;}
+.eyebrow{font:600 12px/1.5 inherit;letter-spacing:.08em;text-transform:uppercase;color:var(--demo-mute);margin:0 0 8px;}
+h1.title{font-family:"Helvetica Neue", Arial, sans-serif;font-size:84px;font-weight:400;line-height:1.05;text-transform:none;margin:0 0 12px;color:var(--demo-ink);}
+.dek{max-width:640px;color:var(--demo-mute);font-size:15px;line-height:1.55;margin:0;}
+.source-note{margin-top:16px;font-size:12px;color:var(--demo-mute);opacity:.7;}
+nav.toc{display:flex;flex-wrap:wrap;gap:0 24px;margin:32px 0 0;padding:16px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+nav.toc a{color:var(--demo-ink);font:500 14px/1.5 inherit;text-decoration:none;border-bottom:1px solid transparent;}
+nav.toc a:hover{border-bottom-color:var(--demo-ink);}
+section{margin-top:48px;}
+h2.sec-title{font-weight:700;font-size:26px;line-height:1.2;margin:0 0 4px;color:var(--demo-ink);}
+p.sec-sub{color:var(--demo-mute);font-size:13px;margin:0 0 20px;}
+.empty{color:var(--demo-mute);font-size:13px;font-style:italic;}
+
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+.swatch{border:1px solid var(--hairline-soft);}
+.swatch-fill{height:64px;}
+.swatch-meta{padding:8px 10px;}
+.swatch-name{font:500 12px/1.5 inherit;}
+.swatch-hex{font:500 11px/1.5 monospace;color:var(--demo-mute);}
+
+.type-row{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--hairline-soft);}
+.type-row:last-child{border-bottom:none;}
+.type-token{font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+.type-token span{display:block;font:400 10px inherit;color:var(--demo-mute);opacity:.7;margin-top:4px;}
+
+.scale-row{display:flex;align-items:center;gap:16px;margin-bottom:8px;font:500 12px monospace;}
+.scale-bar{background:var(--demo-ink);height:14px;}
+.scale-label{width:100px;color:var(--demo-mute);}
+.scale-val{width:60px;}
+
+.radius-grid{display:flex;gap:20px;flex-wrap:wrap;}
+.radius-item{text-align:center;font:500 11px monospace;color:var(--demo-mute);}
+.radius-box{width:64px;height:64px;background:#f2f2f2;border:1px solid var(--hairline);margin-bottom:8px;}
+
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;}
+.comp-cell{text-align:center;}
+.comp-demo{max-width:100%;}
+.comp-label{margin-top:8px;font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+
+footer.pf{margin-top:80px;padding-top:24px;border-top:1px solid var(--hairline);font:700 10px/1.6 inherit;color:var(--demo-mute);letter-spacing:.05em;text-transform:uppercase;}
+@media(max-width:640px){ .type-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="page-head">
+    <p class="eyebrow">Design system</p>
+    <h1 class="title">Mistral Ai</h1>
+    <p class="dek">Mistral AI brands itself with a singular signature — atmospheric sunset gradients (mustard, orange, deep red) layered over photography of mountains, plus a horizontal &quot;sunset stripe&quot; bar that closes every page. The system pairs warm cream-yellow surfaces ({colors.cream}) with a saturated orange primary CTA ({colors.primary}) and uses an elegant near-serif voice for hero displays. Coverage spans homepage (Frontier AI hero), Le Studio product page, Coding solutions, news article surfaces, contact form, and services tier page — all anchored by the signature gradient closing band.</p>
+    <p class="source-note">Source: getdesign.md/design-md/mistral.ai/DESIGN.md · rendered as an unofficial static reference for readability, not affiliated with Mistral Ai.</p>
+  </div>
+  <nav class="toc">
+    <a href="#colors">Colors</a>
+    <a href="#type">Typography</a>
+    <a href="#spacing">Spacing</a>
+    <a href="#radius">Radius</a>
+    <a href="#components">Components</a>
+    <a href="index.html">← All brands</a>
+  </nav>
+
+  <section id="colors">
+    <h2 class="sec-title">Colors</h2>
+    <p class="sec-sub">Every color token in the spec, rendered as a swatch.</p>
+    <div class="swatch-grid"><div class="swatch">
+          <div class="swatch-fill" style="background:#fa520f;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary</div><div class="swatch-hex">#fa520f</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#cc3a05;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary-deep</div><div class="swatch-hex">#cc3a05</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-primary</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffd06a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">sunshine-300</div><div class="swatch-hex">#ffd06a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffb83e;"></div>
+          <div class="swatch-meta"><div class="swatch-name">sunshine-500</div><div class="swatch-hex">#ffb83e</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffa110;"></div>
+          <div class="swatch-meta"><div class="swatch-name">sunshine-700</div><div class="swatch-hex">#ffa110</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ff8105;"></div>
+          <div class="swatch-meta"><div class="swatch-name">sunshine-800</div><div class="swatch-hex">#ff8105</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ff8a00;"></div>
+          <div class="swatch-meta"><div class="swatch-name">sunshine-900</div><div class="swatch-hex">#ff8a00</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffd900;"></div>
+          <div class="swatch-meta"><div class="swatch-name">yellow-saturated</div><div class="swatch-hex">#ffd900</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fff8e0;"></div>
+          <div class="swatch-meta"><div class="swatch-name">cream</div><div class="swatch-hex">#fff8e0</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fffaeb;"></div>
+          <div class="swatch-meta"><div class="swatch-name">cream-light</div><div class="swatch-hex">#fffaeb</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fff0c2;"></div>
+          <div class="swatch-meta"><div class="swatch-name">cream-deeper</div><div class="swatch-hex">#fff0c2</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#e6d5a8;"></div>
+          <div class="swatch-meta"><div class="swatch-name">beige-deep</div><div class="swatch-hex">#e6d5a8</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffe295;"></div>
+          <div class="swatch-meta"><div class="swatch-name">block-5</div><div class="swatch-hex">#ffe295</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffd900;"></div>
+          <div class="swatch-meta"><div class="swatch-name">block-6</div><div class="swatch-hex">#ffd900</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ff8105;"></div>
+          <div class="swatch-meta"><div class="swatch-name">block-7</div><div class="swatch-hex">#ff8105</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#1f1f1f;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#1f1f1f</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#3d3d3d;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink-tint</div><div class="swatch-hex">#3d3d3d</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#2c2c2c;"></div>
+          <div class="swatch-meta"><div class="swatch-name">charcoal</div><div class="swatch-hex">#2c2c2c</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#4a4a4a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">slate</div><div class="swatch-hex">#4a4a4a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#6a6a6a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">steel</div><div class="swatch-hex">#6a6a6a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#8a8a8a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">stone</div><div class="swatch-hex">#8a8a8a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#a8a8a8;"></div>
+          <div class="swatch-meta"><div class="swatch-name">muted</div><div class="swatch-hex">#a8a8a8</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#e5e5e5</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ededed;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-soft</div><div class="swatch-hex">#ededed</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#c7c7c7;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-strong</div><div class="swatch-hex">#c7c7c7</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fafafa;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface</div><div class="swatch-hex">#fafafa</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fff8e0;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-cream</div><div class="swatch-hex">#fff8e0</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fffaeb;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-cream-soft</div><div class="swatch-hex">#fffaeb</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#1c1c1e;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-code</div><div class="swatch-hex">#1c1c1e</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#a8a8a8;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark-muted</div><div class="swatch-hex">#a8a8a8</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#1f1f1f;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-cream</div><div class="swatch-hex">#1f1f1f</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fff8e0;"></div>
+          <div class="swatch-meta"><div class="swatch-name">footer-cream</div><div class="swatch-hex">#fff8e0</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fa520f;"></div>
+          <div class="swatch-meta"><div class="swatch-name">link</div><div class="swatch-hex">#fa520f</div></div>
+        </div></div>
+  </section>
+
+  <section id="type">
+    <h2 class="sec-title">Typography</h2>
+    <p class="sec-sub">Each type token rendered at its real size, weight, and line height.</p>
+    <div class="type-row">
+          <div class="type-token">hero-display<span>84px/400/1.05</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:84px;font-weight:400;line-height:1.05;letter-spacing:-1.5px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Mistral Ai</p>
+        </div><div class="type-row">
+          <div class="type-token">display-lg<span>64px/400/1.1</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:64px;font-weight:400;line-height:1.1;letter-spacing:-1px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-1<span>52px/400/1.15</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:52px;font-weight:400;line-height:1.15;letter-spacing:-0.5px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-2<span>36px/500/1.2</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:36px;font-weight:500;line-height:1.2;letter-spacing:-0.5px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-3<span>28px/500/1.25</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:28px;font-weight:500;line-height:1.25;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-4<span>22px/500/1.3</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:22px;font-weight:500;line-height:1.3;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-5<span>18px/500/1.4</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:18px;font-weight:500;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">subtitle<span>18px/400/1.5</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:18px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Mistral Ai</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md<span>16px/400/1.55</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:16px;font-weight:400;line-height:1.55;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md-medium<span>16px/500/1.55</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:16px;font-weight:500;line-height:1.55;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm<span>14px/400/1.5</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm-medium<span>14px/500/1.5</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">caption<span>13px/400/1.4</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:400;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">caption-bold<span>13px/600/1.4</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:600;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">micro<span>12px/500/1.4</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:12px;font-weight:500;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Mistral Ai</p>
+        </div><div class="type-row">
+          <div class="type-token">micro-uppercase<span>11px/600/1.4</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:11px;font-weight:600;line-height:1.4;letter-spacing:1px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">button-md<span>14px/500/1.3</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;line-height:1.3;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">stat-display<span>56px/400/1.1</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:56px;font-weight:400;line-height:1.1;letter-spacing:-1px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">code-md<span>14px/400/1.5</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:14px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div>
+  </section>
+
+  <section id="spacing">
+    <h2 class="sec-title">Spacing</h2>
+    <p class="sec-sub">The spacing scale, drawn to relative width.</p>
+    <div class="scale-row"><span class="scale-label">xxs</span><span class="scale-val">4px</span><div class="scale-bar" style="width:4.0px"></div></div><div class="scale-row"><span class="scale-label">xs</span><span class="scale-val">8px</span><div class="scale-bar" style="width:8.0px"></div></div><div class="scale-row"><span class="scale-label">sm</span><span class="scale-val">12px</span><div class="scale-bar" style="width:12.0px"></div></div><div class="scale-row"><span class="scale-label">md</span><span class="scale-val">16px</span><div class="scale-bar" style="width:16.0px"></div></div><div class="scale-row"><span class="scale-label">lg</span><span class="scale-val">20px</span><div class="scale-bar" style="width:20.0px"></div></div><div class="scale-row"><span class="scale-label">xl</span><span class="scale-val">24px</span><div class="scale-bar" style="width:24.0px"></div></div><div class="scale-row"><span class="scale-label">xxl</span><span class="scale-val">32px</span><div class="scale-bar" style="width:32.0px"></div></div><div class="scale-row"><span class="scale-label">xxxl</span><span class="scale-val">40px</span><div class="scale-bar" style="width:40.0px"></div></div><div class="scale-row"><span class="scale-label">section-sm</span><span class="scale-val">48px</span><div class="scale-bar" style="width:48.0px"></div></div><div class="scale-row"><span class="scale-label">section</span><span class="scale-val">64px</span><div class="scale-bar" style="width:64.0px"></div></div><div class="scale-row"><span class="scale-label">section-lg</span><span class="scale-val">96px</span><div class="scale-bar" style="width:96.0px"></div></div><div class="scale-row"><span class="scale-label">hero</span><span class="scale-val">120px</span><div class="scale-bar" style="width:120.0px"></div></div>
+  </section>
+
+  <section id="radius">
+    <h2 class="sec-title">Radius</h2>
+    <p class="sec-sub">Corner-radius tokens applied to a reference box.</p>
+    <div class="radius-grid"><div class="radius-item"><div class="radius-box" style="border-radius:4px"></div>xs · 4px</div><div class="radius-item"><div class="radius-box" style="border-radius:6px"></div>sm · 6px</div><div class="radius-item"><div class="radius-box" style="border-radius:8px"></div>md · 8px</div><div class="radius-item"><div class="radius-box" style="border-radius:12px"></div>lg · 12px</div><div class="radius-item"><div class="radius-box" style="border-radius:16px"></div>xl · 16px</div><div class="radius-item"><div class="radius-box" style="border-radius:20px"></div>xxl · 20px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>full · 9999px</div></div>
+  </section>
+
+  <section id="components">
+    <h2 class="sec-title">Components</h2>
+    <p class="sec-sub">Documented components with tokens resolved to real color / type / radius / spacing.</p>
+    <div class="comp-grid"><div class="comp-cell">
+          <div class="comp-demo" style="background:#fa520f;color:#ffffff;border-radius:8px;padding:10px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary</div>
+          <div class="comp-label">button-primary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#cc3a05;color:#ffffff;border-radius:0px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary-pressed</div>
+          <div class="comp-label">button-primary-pressed</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#e5e5e5;color:#a8a8a8;border-radius:0px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary-disabled</div>
+          <div class="comp-label">button-primary-disabled</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fff8e0;color:#1f1f1f;border-radius:8px;padding:10px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-cream</div>
+          <div class="comp-label">button-cream</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1f1f1f;color:#ffffff;border-radius:8px;padding:10px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-dark</div>
+          <div class="comp-label">button-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#1f1f1f;border-radius:8px;padding:10px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-secondary</div>
+          <div class="comp-label">button-secondary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#1f1f1f;border-radius:8px;padding:10px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-on-cream</div>
+          <div class="comp-label">button-on-cream</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#fa520f;border-radius:0px;padding:0;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-link</div>
+          <div class="comp-label">button-link</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:12px;padding:{spacing.xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-base</div>
+          <div class="comp-label">card-base</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:12px;padding:{spacing.xxl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-feature</div>
+          <div class="comp-label">card-feature</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fff8e0;color:#1f1f1f;border-radius:12px;padding:{spacing.xxl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-cream</div>
+          <div class="comp-label">card-cream</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fffaeb;color:#1f1f1f;border-radius:12px;padding:{spacing.xxl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-cream-soft</div>
+          <div class="comp-label">card-cream-soft</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:12px;padding:{spacing.xxl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-feature-product</div>
+          <div class="comp-label">card-feature-product</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1c1c1e;color:#ffffff;border-radius:12px;padding:0;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-photographic</div>
+          <div class="comp-label">card-photographic</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:12px;padding:{spacing.xxl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">pricing-card</div>
+          <div class="comp-label">pricing-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fff8e0;color:#111111;border-radius:12px;padding:{spacing.xxl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">pricing-card-featured</div>
+          <div class="comp-label">pricing-card-featured</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#1f1f1f;border-radius:8px;padding:{spacing.sm} {spacing.md};font-family:"Helvetica Neue", Arial, sans-serif;font-size:16px;font-weight:400;display:inline-block;height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">text-input</div>
+          <div class="comp-label">text-input</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#1f1f1f;border-radius:0px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">text-input-focused</div>
+          <div class="comp-label">text-input-focused</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#1f1f1f;border-radius:8px;padding:{spacing.md};font-family:"Helvetica Neue", Arial, sans-serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">text-area</div>
+          <div class="comp-label">text-area</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fff8e0;color:#111111;border-radius:12px;padding:{spacing.xxl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">contact-form-panel</div>
+          <div class="comp-label">contact-form-panel</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#6a6a6a;border-radius:9999px;padding:{spacing.xs} {spacing.md};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">pill-tab</div>
+          <div class="comp-label">pill-tab</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1f1f1f;color:#ffffff;border-radius:9999px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">pill-tab-active</div>
+          <div class="comp-label">pill-tab-active</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#6a6a6a;border-radius:0px;padding:{spacing.sm} {spacing.md};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">segmented-tab</div>
+          <div class="comp-label">segmented-tab</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#fa520f;border-radius:0px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">segmented-tab-active</div>
+          <div class="comp-label">segmented-tab-active</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fa520f;color:#ffffff;border-radius:9999px;padding:4px 10px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">badge-orange</div>
+          <div class="comp-label">badge-orange</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fff0c2;color:#1f1f1f;border-radius:9999px;padding:4px 10px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">badge-cream</div>
+          <div class="comp-label">badge-cream</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1f1f1f;color:#ffffff;border-radius:9999px;padding:4px 10px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">badge-dark</div>
+          <div class="comp-label">badge-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1f1f1f;color:#ffffff;border-radius:0px;padding:{spacing.sm} {spacing.md};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">promo-banner</div>
+          <div class="comp-label">promo-banner</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffa110;color:#1f1f1f;border-radius:0;padding:{spacing.hero};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-band-sunset</div>
+          <div class="comp-label">hero-band-sunset</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fa520f;color:#ffffff;border-radius:0;padding:{spacing.lg} 0;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">sunset-stripe-band</div>
+          <div class="comp-label">sunset-stripe-band</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fff8e0;color:#1f1f1f;border-radius:12px;padding:{spacing.section};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">cta-banner-cream</div>
+          <div class="comp-label">cta-banner-cream</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1c1c1e;color:#ffffff;border-radius:8px;padding:{spacing.md};font-family:"SF Mono", "Courier New", monospace;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">code-block</div>
+          <div class="comp-label">code-block</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1c1c1e;color:#a8a8a8;border-radius:0px;padding:{spacing.xs} {spacing.md};font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">code-block-header</div>
+          <div class="comp-label">code-block-header</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fff8e0;color:#111111;border-radius:8px;padding:{spacing.md};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">feature-icon-tile</div>
+          <div class="comp-label">feature-icon-tile</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:12px;padding:{spacing.xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">industry-tile</div>
+          <div class="comp-label">industry-tile</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#1f1f1f;border-radius:0px;padding:{spacing.lg};font-family:"Helvetica Neue", Arial, sans-serif;font-size:56px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">stat-cell</div>
+          <div class="comp-label">stat-cell</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:12px;padding:{spacing.xxl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">customer-testimonial-card</div>
+          <div class="comp-label">customer-testimonial-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#6a6a6a;border-radius:0px;padding:{spacing.lg};font-family:"Helvetica Neue", Arial, sans-serif;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">logo-wall-item</div>
+          <div class="comp-label">logo-wall-item</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:8px;padding:{spacing.xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">faq-accordion-item</div>
+          <div class="comp-label">faq-accordion-item</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fff8e0;color:#1f1f1f;border-radius:0px;padding:{spacing.section} {spacing.xxl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer-region</div>
+          <div class="comp-label">footer-region</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#fa520f;border-radius:0px;padding:{spacing.xxs} 0;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer-link</div>
+          <div class="comp-label">footer-link</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1f1f1f;color:#ffffff;border-radius:8px;padding:{spacing.sm} {spacing.md};font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">app-store-badge</div>
+          <div class="comp-label">app-store-badge</div>
+        </div></div>
+  </section>
+
+  <footer class="pf">Mistral Ai design system analysis · rendered from DESIGN.md · independent, unofficial</footer>
+</div>
+</body>
+</html>

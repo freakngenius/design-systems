@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Expo — DESIGN.md rendered</title>
+<style>
+:root{
+  --demo-ink:#171717; --demo-canvas:#ffffff; --demo-mute:#999999; --demo-accent:#1a1a1a;
+  --hairline:#e2e2e2; --hairline-soft:#eeeeee;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--demo-canvas);color:var(--demo-ink);font-family:"Helvetica Neue",Arial,sans-serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 120px;}
+.page-head{margin-bottom:48px;}
+.eyebrow{font:600 12px/1.5 inherit;letter-spacing:.08em;text-transform:uppercase;color:var(--demo-mute);margin:0 0 8px;}
+h1.title{font-family:Georgia, "Times New Roman", serif;font-size:64px;font-weight:600;line-height:1.05;text-transform:none;margin:0 0 12px;color:var(--demo-ink);}
+.dek{max-width:640px;color:var(--demo-mute);font-size:15px;line-height:1.55;margin:0;}
+.source-note{margin-top:16px;font-size:12px;color:var(--demo-mute);opacity:.7;}
+nav.toc{display:flex;flex-wrap:wrap;gap:0 24px;margin:32px 0 0;padding:16px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+nav.toc a{color:var(--demo-ink);font:500 14px/1.5 inherit;text-decoration:none;border-bottom:1px solid transparent;}
+nav.toc a:hover{border-bottom-color:var(--demo-ink);}
+section{margin-top:48px;}
+h2.sec-title{font-weight:700;font-size:26px;line-height:1.2;margin:0 0 4px;color:var(--demo-ink);}
+p.sec-sub{color:var(--demo-mute);font-size:13px;margin:0 0 20px;}
+.empty{color:var(--demo-mute);font-size:13px;font-style:italic;}
+
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+.swatch{border:1px solid var(--hairline-soft);}
+.swatch-fill{height:64px;}
+.swatch-meta{padding:8px 10px;}
+.swatch-name{font:500 12px/1.5 inherit;}
+.swatch-hex{font:500 11px/1.5 monospace;color:var(--demo-mute);}
+
+.type-row{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--hairline-soft);}
+.type-row:last-child{border-bottom:none;}
+.type-token{font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+.type-token span{display:block;font:400 10px inherit;color:var(--demo-mute);opacity:.7;margin-top:4px;}
+
+.scale-row{display:flex;align-items:center;gap:16px;margin-bottom:8px;font:500 12px monospace;}
+.scale-bar{background:var(--demo-ink);height:14px;}
+.scale-label{width:100px;color:var(--demo-mute);}
+.scale-val{width:60px;}
+
+.radius-grid{display:flex;gap:20px;flex-wrap:wrap;}
+.radius-item{text-align:center;font:500 11px monospace;color:var(--demo-mute);}
+.radius-box{width:64px;height:64px;background:#f2f2f2;border:1px solid var(--hairline);margin-bottom:8px;}
+
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;}
+.comp-cell{text-align:center;}
+.comp-demo{max-width:100%;}
+.comp-label{margin-top:8px;font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+
+footer.pf{margin-top:80px;padding-top:24px;border-top:1px solid var(--hairline);font:700 10px/1.6 inherit;color:var(--demo-mute);letter-spacing:.05em;text-transform:uppercase;}
+@media(max-width:640px){ .type-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="page-head">
+    <p class="eyebrow">Design system</p>
+    <h1 class="title">Expo</h1>
+    <p class="dek">A React Native developer-platform whose marketing site reads like a quietly-confident infrastructure brand. The base canvas is pure white with a soft sky-blue gradient atmospheric wash behind the hero; near-black ink (`#171717`) carries body and display alike. The single brand voltage is **pure black** (`#000000`) for primary CTAs — minimal and editorial-feeling, paired with a small blue text-link accent (`#0d74ce`) reserved for inline body links. Type pairs Inter at modest weights (display 600, body 400) with JetBrains Mono on every code surface. The brand&#x27;s strongest visual signature is the **device-mockup hero** — a centered MacBook + iPhone composite showing real Expo dev surfaces — over the gradient sky wash.</p>
+    <p class="source-note">Source: getdesign.md/design-md/expo/DESIGN.md · rendered as an unofficial static reference for readability, not affiliated with Expo.</p>
+  </div>
+  <nav class="toc">
+    <a href="#colors">Colors</a>
+    <a href="#type">Typography</a>
+    <a href="#spacing">Spacing</a>
+    <a href="#radius">Radius</a>
+    <a href="#components">Components</a>
+    <a href="index.html">← All brands</a>
+  </nav>
+
+  <section id="colors">
+    <h2 class="sec-title">Colors</h2>
+    <p class="sec-sub">Every color token in the spec, rendered as a swatch.</p>
+    <div class="swatch-grid"><div class="swatch">
+          <div class="swatch-fill" style="background:#000000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary</div><div class="swatch-hex">#000000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#1a1a1a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary-active</div><div class="swatch-hex">#1a1a1a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0d74ce;"></div>
+          <div class="swatch-meta"><div class="swatch-name">text-link</div><div class="swatch-hex">#0d74ce</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#476cff;"></div>
+          <div class="swatch-meta"><div class="swatch-name">text-link-secondary</div><div class="swatch-hex">#476cff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#171717;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#171717</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#60646c;"></div>
+          <div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#60646c</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#171717;"></div>
+          <div class="swatch-meta"><div class="swatch-name">body-strong</div><div class="swatch-hex">#171717</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#999999;"></div>
+          <div class="swatch-meta"><div class="swatch-name">muted</div><div class="swatch-hex">#999999</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#cccccc;"></div>
+          <div class="swatch-meta"><div class="swatch-name">muted-soft</div><div class="swatch-hex">#cccccc</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f0f0f3;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#f0f0f3</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f5f5f7;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-soft</div><div class="swatch-hex">#f5f5f7</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#dcdee0;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-strong</div><div class="swatch-hex">#dcdee0</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fafafa;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas-soft</div><div class="swatch-hex">#fafafa</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-card</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f0f0f3;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-strong</div><div class="swatch-hex">#f0f0f3</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#171717;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-dark</div><div class="swatch-hex">#171717</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#1a1a1a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-dark-elevated</div><div class="swatch-hex">#1a1a1a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-primary</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#b0b4ba;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark-soft</div><div class="swatch-hex">#b0b4ba</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#cfe7ff;"></div>
+          <div class="swatch-meta"><div class="swatch-name">gradient-sky-light</div><div class="swatch-hex">#cfe7ff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#a8c8e8;"></div>
+          <div class="swatch-meta"><div class="swatch-name">gradient-sky-mid</div><div class="swatch-hex">#a8c8e8</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ab6400;"></div>
+          <div class="swatch-meta"><div class="swatch-name">accent-warning</div><div class="swatch-hex">#ab6400</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#8145b5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">accent-preview</div><div class="swatch-hex">#8145b5</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#47c2ff;"></div>
+          <div class="swatch-meta"><div class="swatch-name">accent-link-bright</div><div class="swatch-hex">#47c2ff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#eb8e90;"></div>
+          <div class="swatch-meta"><div class="swatch-name">semantic-error</div><div class="swatch-hex">#eb8e90</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#16a34a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">semantic-success</div><div class="swatch-hex">#16a34a</div></div>
+        </div></div>
+  </section>
+
+  <section id="type">
+    <h2 class="sec-title">Typography</h2>
+    <p class="sec-sub">Each type token rendered at its real size, weight, and line height.</p>
+    <div class="type-row">
+          <div class="type-token">display-mega<span>64px/600/1.05</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:64px;font-weight:600;line-height:1.05;letter-spacing:-1.92px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Expo</p>
+        </div><div class="type-row">
+          <div class="type-token">display-xl<span>48px/600/1.1</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:48px;font-weight:600;line-height:1.1;letter-spacing:-1.44px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">display-lg<span>36px/600/1.15</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:36px;font-weight:600;line-height:1.15;letter-spacing:-1.08px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">display-md<span>28px/600/1.2</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:28px;font-weight:600;line-height:1.2;letter-spacing:-0.84px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">display-sm<span>22px/600/1.25</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:22px;font-weight:600;line-height:1.25;letter-spacing:-0.5px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">title-md<span>18px/600/1.4</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:600;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">title-sm<span>16px/600/1.4</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md<span>16px/400/1.5</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Expo</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm<span>14px/400/1.5</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">caption<span>13px/400/1.4</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:13px;font-weight:400;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">caption-uppercase<span>11px/600/1.4</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:11px;font-weight:600;line-height:1.4;letter-spacing:0.88px;text-transform:uppercase;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">code<span>13px/400/1.5</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:13px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">button<span>14px/500/1.0</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;line-height:1.0;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">nav-link<span>14px/500/1.4</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div>
+  </section>
+
+  <section id="spacing">
+    <h2 class="sec-title">Spacing</h2>
+    <p class="sec-sub">The spacing scale, drawn to relative width.</p>
+    <div class="scale-row"><span class="scale-label">xxs</span><span class="scale-val">4px</span><div class="scale-bar" style="width:4.0px"></div></div><div class="scale-row"><span class="scale-label">xs</span><span class="scale-val">8px</span><div class="scale-bar" style="width:8.0px"></div></div><div class="scale-row"><span class="scale-label">sm</span><span class="scale-val">12px</span><div class="scale-bar" style="width:12.0px"></div></div><div class="scale-row"><span class="scale-label">base</span><span class="scale-val">16px</span><div class="scale-bar" style="width:16.0px"></div></div><div class="scale-row"><span class="scale-label">md</span><span class="scale-val">20px</span><div class="scale-bar" style="width:20.0px"></div></div><div class="scale-row"><span class="scale-label">lg</span><span class="scale-val">24px</span><div class="scale-bar" style="width:24.0px"></div></div><div class="scale-row"><span class="scale-label">xl</span><span class="scale-val">32px</span><div class="scale-bar" style="width:32.0px"></div></div><div class="scale-row"><span class="scale-label">xxl</span><span class="scale-val">48px</span><div class="scale-bar" style="width:48.0px"></div></div><div class="scale-row"><span class="scale-label">section</span><span class="scale-val">96px</span><div class="scale-bar" style="width:96.0px"></div></div>
+  </section>
+
+  <section id="radius">
+    <h2 class="sec-title">Radius</h2>
+    <p class="sec-sub">Corner-radius tokens applied to a reference box.</p>
+    <div class="radius-grid"><div class="radius-item"><div class="radius-box" style="border-radius:0px"></div>none · 0px</div><div class="radius-item"><div class="radius-box" style="border-radius:4px"></div>xs · 4px</div><div class="radius-item"><div class="radius-box" style="border-radius:6px"></div>sm · 6px</div><div class="radius-item"><div class="radius-box" style="border-radius:8px"></div>md · 8px</div><div class="radius-item"><div class="radius-box" style="border-radius:12px"></div>lg · 12px</div><div class="radius-item"><div class="radius-box" style="border-radius:16px"></div>xl · 16px</div><div class="radius-item"><div class="radius-box" style="border-radius:24px"></div>xxl · 24px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>pill · 9999px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>full · 9999px</div></div>
+  </section>
+
+  <section id="components">
+    <h2 class="sec-title">Components</h2>
+    <p class="sec-sub">Documented components with tokens resolved to real color / type / radius / spacing.</p>
+    <div class="comp-grid"><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;height:64px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">top-nav</div>
+          <div class="comp-label">top-nav</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:8px;padding:10px 18px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;height:40px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-primary</div>
+          <div class="comp-label">button-primary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1a1a1a;color:#ffffff;border-radius:8px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary-active</div>
+          <div class="comp-label">button-primary-active</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:8px;padding:9px 17px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;height:40px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-secondary</div>
+          <div class="comp-label">button-secondary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#0d74ce;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-tertiary-text</div>
+          <div class="comp-label">button-tertiary-text</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:0px;padding:96px;font-family:Georgia, "Times New Roman", serif;font-size:64px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-band</div>
+          <div class="comp-label">hero-band</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:16px;padding:0;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">device-mockup-card</div>
+          <div class="comp-label">device-mockup-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:12px;padding:24px;font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">feature-card</div>
+          <div class="comp-label">feature-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#171717;color:#ffffff;border-radius:12px;padding:24px;font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">feature-card-dark</div>
+          <div class="comp-label">feature-card-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#60646c;border-radius:12px;padding:20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">workflow-step-card</div>
+          <div class="comp-label">workflow-step-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f0f0f3;color:#111111;border-radius:8px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid rgba(0,0,0,0.06);">workflow-step-icon</div>
+          <div class="comp-label">workflow-step-icon</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#171717;color:#ffffff;border-radius:12px;padding:20px;font-family:"SF Mono", "Courier New", monospace;font-size:13px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">code-block</div>
+          <div class="comp-label">code-block</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#171717;color:#ffffff;border-radius:12px;padding:0;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ide-mockup-card</div>
+          <div class="comp-label">ide-mockup-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:12px;padding:32px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">pricing-tier-card</div>
+          <div class="comp-label">pricing-tier-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#171717;color:#ffffff;border-radius:12px;padding:32px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">pricing-tier-featured</div>
+          <div class="comp-label">pricing-tier-featured</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:8px;padding:12px 16px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">text-input</div>
+          <div class="comp-label">text-input</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f0f0f3;color:#171717;border-radius:9999px;padding:4px 10px;font-family:Georgia, "Times New Roman", serif;font-size:11px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">badge-pill</div>
+          <div class="comp-label">badge-pill</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#111111;border-radius:8px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;width:64px;height:64px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid rgba(0,0,0,0.06);">ecosystem-tile</div>
+          <div class="comp-label">ecosystem-tile</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#171717;border-radius:0px;padding:96px;font-family:Georgia, "Times New Roman", serif;font-size:36px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">cta-band</div>
+          <div class="comp-label">cta-band</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#60646c;border-radius:12px;padding:24px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">testimonial-card</div>
+          <div class="comp-label">testimonial-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#60646c;border-radius:0px;padding:64px 48px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer-light</div>
+          <div class="comp-label">footer-light</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#60646c;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer-link</div>
+          <div class="comp-label">footer-link</div>
+        </div></div>
+  </section>
+
+  <footer class="pf">Expo design system analysis · rendered from DESIGN.md · independent, unofficial</footer>
+</div>
+</body>
+</html>

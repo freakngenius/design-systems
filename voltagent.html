@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voltagent — DESIGN.md rendered</title>
+<style>
+:root{
+  --demo-ink:#f2f2f2; --demo-canvas:#101010; --demo-mute:#8b949e; --demo-accent:#2fd6a1;
+  --hairline:#e2e2e2; --hairline-soft:#eeeeee;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--demo-canvas);color:var(--demo-ink);font-family:"Helvetica Neue",Arial,sans-serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 120px;}
+.page-head{margin-bottom:48px;}
+.eyebrow{font:600 12px/1.5 inherit;letter-spacing:.08em;text-transform:uppercase;color:var(--demo-mute);margin:0 0 8px;}
+h1.title{font-family:Georgia, "Times New Roman", serif;font-size:60px;font-weight:400;line-height:60px;text-transform:none;margin:0 0 12px;color:var(--demo-ink);}
+.dek{max-width:640px;color:var(--demo-mute);font-size:15px;line-height:1.55;margin:0;}
+.source-note{margin-top:16px;font-size:12px;color:var(--demo-mute);opacity:.7;}
+nav.toc{display:flex;flex-wrap:wrap;gap:0 24px;margin:32px 0 0;padding:16px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+nav.toc a{color:var(--demo-ink);font:500 14px/1.5 inherit;text-decoration:none;border-bottom:1px solid transparent;}
+nav.toc a:hover{border-bottom-color:var(--demo-ink);}
+section{margin-top:48px;}
+h2.sec-title{font-weight:700;font-size:26px;line-height:1.2;margin:0 0 4px;color:var(--demo-ink);}
+p.sec-sub{color:var(--demo-mute);font-size:13px;margin:0 0 20px;}
+.empty{color:var(--demo-mute);font-size:13px;font-style:italic;}
+
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+.swatch{border:1px solid var(--hairline-soft);}
+.swatch-fill{height:64px;}
+.swatch-meta{padding:8px 10px;}
+.swatch-name{font:500 12px/1.5 inherit;}
+.swatch-hex{font:500 11px/1.5 monospace;color:var(--demo-mute);}
+
+.type-row{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--hairline-soft);}
+.type-row:last-child{border-bottom:none;}
+.type-token{font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+.type-token span{display:block;font:400 10px inherit;color:var(--demo-mute);opacity:.7;margin-top:4px;}
+
+.scale-row{display:flex;align-items:center;gap:16px;margin-bottom:8px;font:500 12px monospace;}
+.scale-bar{background:var(--demo-ink);height:14px;}
+.scale-label{width:100px;color:var(--demo-mute);}
+.scale-val{width:60px;}
+
+.radius-grid{display:flex;gap:20px;flex-wrap:wrap;}
+.radius-item{text-align:center;font:500 11px monospace;color:var(--demo-mute);}
+.radius-box{width:64px;height:64px;background:#f2f2f2;border:1px solid var(--hairline);margin-bottom:8px;}
+
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;}
+.comp-cell{text-align:center;}
+.comp-demo{max-width:100%;}
+.comp-label{margin-top:8px;font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+
+footer.pf{margin-top:80px;padding-top:24px;border-top:1px solid var(--hairline);font:700 10px/1.6 inherit;color:var(--demo-mute);letter-spacing:.05em;text-transform:uppercase;}
+@media(max-width:640px){ .type-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="page-head">
+    <p class="eyebrow">Design system</p>
+    <h1 class="title">Voltagent</h1>
+    <p class="dek">An inspired interpretation of Voltagent&#x27;s design language — a developer-focused AI agent engineering platform whose surface is an unrelenting near-black canvas broken only by a single electric-green brand accent, code-editor mockups inside the hero, and a precise grid of dark feature cards that read like a documentation site dressed as marketing.</p>
+    <p class="source-note">Source: getdesign.md/design-md/voltagent/DESIGN.md · rendered as an unofficial static reference for readability, not affiliated with Voltagent.</p>
+  </div>
+  <nav class="toc">
+    <a href="#colors">Colors</a>
+    <a href="#type">Typography</a>
+    <a href="#spacing">Spacing</a>
+    <a href="#radius">Radius</a>
+    <a href="#components">Components</a>
+    <a href="index.html">← All brands</a>
+  </nav>
+
+  <section id="colors">
+    <h2 class="sec-title">Colors</h2>
+    <p class="sec-sub">Every color token in the spec, rendered as a swatch.</p>
+    <div class="swatch-grid"><div class="swatch">
+          <div class="swatch-fill" style="background:#00d992;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary</div><div class="swatch-hex">#00d992</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#2fd6a1;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary-soft</div><div class="swatch-hex">#2fd6a1</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#10b981;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary-deep</div><div class="swatch-hex">#10b981</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#101010;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-primary</div><div class="swatch-hex">#101010</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f2f2f2;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#f2f2f2</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink-strong</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#bdbdbd;"></div>
+          <div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#bdbdbd</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#8b949e;"></div>
+          <div class="swatch-meta"><div class="swatch-name">mute</div><div class="swatch-hex">#8b949e</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#3d3a39;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#3d3a39</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#b8b3b0;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-soft</div><div class="swatch-hex">#b8b3b0</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#101010;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#101010</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#1a1a1a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas-soft</div><div class="swatch-hex">#1a1a1a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f5f6f7;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas-text-soft</div><div class="swatch-hex">#f5f6f7</div></div>
+        </div></div>
+  </section>
+
+  <section id="type">
+    <h2 class="sec-title">Typography</h2>
+    <p class="sec-sub">Each type token rendered at its real size, weight, and line height.</p>
+    <div class="type-row">
+          <div class="type-token">display-xl<span>60px/400/60px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:60px;font-weight:400;line-height:60px;letter-spacing:-0.65px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Voltagent</p>
+        </div><div class="type-row">
+          <div class="type-token">display-lg<span>36px/400/40px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:36px;font-weight:400;line-height:40px;letter-spacing:-0.9px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">display-md<span>24px/700/32px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:24px;font-weight:700;line-height:32px;letter-spacing:-0.6px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">display-sm<span>20px/600/28px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:20px;font-weight:600;line-height:28px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">eyebrow-mono<span>14px/600/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:600;line-height:20px;letter-spacing:2.52px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">eyebrow-uppercase<span>18px/600/28px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:600;line-height:28px;letter-spacing:0.45px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">body-lg<span>18px/400/28px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:400;line-height:28px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md<span>16px/400/26px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;line-height:26px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Voltagent</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md-strong<span>16px/600/24px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;line-height:24px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm<span>14px/400/20px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;line-height:20px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm-strong<span>14px/600/23px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:600;line-height:23px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">caption<span>12px/400/16px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:12px;font-weight:400;line-height:16px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">caption-strong<span>12px/500/16px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:12px;font-weight:500;line-height:16px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">code<span>13px/400/18px</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:13px;font-weight:400;line-height:18px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">code-strong<span>13px/550/16px</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:13px;font-weight:550;line-height:16px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Voltagent</p>
+        </div><div class="type-row">
+          <div class="type-token">button-md<span>16px/600/24px</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;line-height:24px;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div>
+  </section>
+
+  <section id="spacing">
+    <h2 class="sec-title">Spacing</h2>
+    <p class="sec-sub">The spacing scale, drawn to relative width.</p>
+    <div class="scale-row"><span class="scale-label">xxs</span><span class="scale-val">2px</span><div class="scale-bar" style="width:2.0px"></div></div><div class="scale-row"><span class="scale-label">xs</span><span class="scale-val">4px</span><div class="scale-bar" style="width:4.0px"></div></div><div class="scale-row"><span class="scale-label">sm</span><span class="scale-val">8px</span><div class="scale-bar" style="width:8.0px"></div></div><div class="scale-row"><span class="scale-label">md</span><span class="scale-val">12px</span><div class="scale-bar" style="width:12.0px"></div></div><div class="scale-row"><span class="scale-label">lg</span><span class="scale-val">16px</span><div class="scale-bar" style="width:16.0px"></div></div><div class="scale-row"><span class="scale-label">xl</span><span class="scale-val">20px</span><div class="scale-bar" style="width:20.0px"></div></div><div class="scale-row"><span class="scale-label">2xl</span><span class="scale-val">24px</span><div class="scale-bar" style="width:24.0px"></div></div><div class="scale-row"><span class="scale-label">3xl</span><span class="scale-val">32px</span><div class="scale-bar" style="width:32.0px"></div></div><div class="scale-row"><span class="scale-label">4xl</span><span class="scale-val">40px</span><div class="scale-bar" style="width:40.0px"></div></div><div class="scale-row"><span class="scale-label">5xl</span><span class="scale-val">48px</span><div class="scale-bar" style="width:48.0px"></div></div><div class="scale-row"><span class="scale-label">6xl</span><span class="scale-val">64px</span><div class="scale-bar" style="width:64.0px"></div></div>
+  </section>
+
+  <section id="radius">
+    <h2 class="sec-title">Radius</h2>
+    <p class="sec-sub">Corner-radius tokens applied to a reference box.</p>
+    <div class="radius-grid"><div class="radius-item"><div class="radius-box" style="border-radius:0px"></div>none · 0px</div><div class="radius-item"><div class="radius-box" style="border-radius:4px"></div>xs · 4px</div><div class="radius-item"><div class="radius-box" style="border-radius:6px"></div>sm · 6px</div><div class="radius-item"><div class="radius-box" style="border-radius:8px"></div>md · 8px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>pill · 9999px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>full · 9999px</div></div>
+  </section>
+
+  <section id="components">
+    <h2 class="sec-title">Components</h2>
+    <p class="sec-sub">Documented components with tokens resolved to real color / type / radius / spacing.</p>
+    <div class="comp-grid"><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#f2f2f2;border-radius:0px;padding:{spacing.md} {spacing.3xl};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">nav-bar</div>
+          <div class="comp-label">nav-bar</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#bdbdbd;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">nav-link</div>
+          <div class="comp-label">nav-link</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#00d992;color:#101010;border-radius:6px;padding:{spacing.md} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary</div>
+          <div class="comp-label">button-primary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#f2f2f2;border-radius:6px;padding:{spacing.md} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-outline-on-dark</div>
+          <div class="comp-label">button-outline-on-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#2fd6a1;border-radius:6px;padding:{spacing.md} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-ghost-green</div>
+          <div class="comp-label">button-ghost-green</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#f2f2f2;border-radius:9999px;padding:{spacing.xs} {spacing.md};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-pill-tag</div>
+          <div class="comp-label">button-pill-tag</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1a1a1a;color:#f2f2f2;border-radius:6px;padding:{spacing.md} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">text-input</div>
+          <div class="comp-label">text-input</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#f2f2f2;border-radius:8px;padding:{spacing.2xl};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-feature</div>
+          <div class="comp-label">card-feature</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#f2f2f2;border-radius:8px;padding:{spacing.xl};font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">card-feature-emphasized</div>
+          <div class="comp-label">card-feature-emphasized</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#f2f2f2;border-radius:8px;padding:{spacing.xl};font-family:"SF Mono", "Courier New", monospace;font-size:13px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">code-mockup</div>
+          <div class="comp-label">code-mockup</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1a1a1a;color:#f5f6f7;border-radius:6px;padding:{spacing.xxs} {spacing.sm};font-family:"SF Mono", "Courier New", monospace;font-size:13px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">code-inline-chip</div>
+          <div class="comp-label">code-inline-chip</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#f2f2f2;border-radius:0px;padding:{spacing.5xl} {spacing.3xl};font-family:Georgia, "Times New Roman", serif;font-size:60px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-band</div>
+          <div class="comp-label">hero-band</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#f2f2f2;border-radius:0px;padding:{spacing.5xl} {spacing.3xl};font-family:Georgia, "Times New Roman", serif;font-size:36px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">content-band</div>
+          <div class="comp-label">content-band</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#111111;border-radius:0px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">green-divider-band</div>
+          <div class="comp-label">green-divider-band</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#bdbdbd;border-radius:0px;padding:{spacing.4xl} {spacing.3xl};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer</div>
+          <div class="comp-label">footer</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1a1a1a;color:#f2f2f2;border-radius:8px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-pricing-tier</div>
+          <div class="comp-label">ex-pricing-tier</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f2f2f2;color:#101010;border-radius:8px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-pricing-tier-featured</div>
+          <div class="comp-label">ex-pricing-tier-featured</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1a1a1a;color:#111111;border-radius:8px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-product-selector</div>
+          <div class="comp-label">ex-product-selector</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#111111;border-radius:8px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-cart-drawer</div>
+          <div class="comp-label">ex-cart-drawer</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#111111;border-radius:6px;padding:{spacing.md} {spacing.lg};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-app-shell-row</div>
+          <div class="comp-label">ex-app-shell-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#111111;border-radius:0px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-data-table-cell</div>
+          <div class="comp-label">ex-data-table-cell</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1a1a1a;color:#111111;border-radius:8px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-auth-form-card</div>
+          <div class="comp-label">ex-auth-form-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#111111;border-radius:8px;padding:{spacing.2xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-modal-card</div>
+          <div class="comp-label">ex-modal-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#1a1a1a;color:#111111;border-radius:8px;padding:{spacing.3xl};font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-empty-state-card</div>
+          <div class="comp-label">ex-empty-state-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#101010;color:#111111;border-radius:8px;padding:{spacing.md} {spacing.lg};font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">ex-toast</div>
+          <div class="comp-label">ex-toast</div>
+        </div></div>
+  </section>
+
+  <footer class="pf">Voltagent design system analysis · rendered from DESIGN.md · independent, unofficial</footer>
+</div>
+</body>
+</html>

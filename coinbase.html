@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Coinbase — DESIGN.md rendered</title>
+<style>
+:root{
+  --demo-ink:#0a0b0d; --demo-canvas:#ffffff; --demo-mute:#7c828a; --demo-accent:#003ecc;
+  --hairline:#e2e2e2; --hairline-soft:#eeeeee;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--demo-canvas);color:var(--demo-ink);font-family:"Helvetica Neue",Arial,sans-serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 120px;}
+.page-head{margin-bottom:48px;}
+.eyebrow{font:600 12px/1.5 inherit;letter-spacing:.08em;text-transform:uppercase;color:var(--demo-mute);margin:0 0 8px;}
+h1.title{font-family:Georgia, "Times New Roman", serif;font-size:80px;font-weight:400;line-height:1.0;text-transform:none;margin:0 0 12px;color:var(--demo-ink);}
+.dek{max-width:640px;color:var(--demo-mute);font-size:15px;line-height:1.55;margin:0;}
+.source-note{margin-top:16px;font-size:12px;color:var(--demo-mute);opacity:.7;}
+nav.toc{display:flex;flex-wrap:wrap;gap:0 24px;margin:32px 0 0;padding:16px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+nav.toc a{color:var(--demo-ink);font:500 14px/1.5 inherit;text-decoration:none;border-bottom:1px solid transparent;}
+nav.toc a:hover{border-bottom-color:var(--demo-ink);}
+section{margin-top:48px;}
+h2.sec-title{font-weight:700;font-size:26px;line-height:1.2;margin:0 0 4px;color:var(--demo-ink);}
+p.sec-sub{color:var(--demo-mute);font-size:13px;margin:0 0 20px;}
+.empty{color:var(--demo-mute);font-size:13px;font-style:italic;}
+
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+.swatch{border:1px solid var(--hairline-soft);}
+.swatch-fill{height:64px;}
+.swatch-meta{padding:8px 10px;}
+.swatch-name{font:500 12px/1.5 inherit;}
+.swatch-hex{font:500 11px/1.5 monospace;color:var(--demo-mute);}
+
+.type-row{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--hairline-soft);}
+.type-row:last-child{border-bottom:none;}
+.type-token{font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+.type-token span{display:block;font:400 10px inherit;color:var(--demo-mute);opacity:.7;margin-top:4px;}
+
+.scale-row{display:flex;align-items:center;gap:16px;margin-bottom:8px;font:500 12px monospace;}
+.scale-bar{background:var(--demo-ink);height:14px;}
+.scale-label{width:100px;color:var(--demo-mute);}
+.scale-val{width:60px;}
+
+.radius-grid{display:flex;gap:20px;flex-wrap:wrap;}
+.radius-item{text-align:center;font:500 11px monospace;color:var(--demo-mute);}
+.radius-box{width:64px;height:64px;background:#f2f2f2;border:1px solid var(--hairline);margin-bottom:8px;}
+
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;}
+.comp-cell{text-align:center;}
+.comp-demo{max-width:100%;}
+.comp-label{margin-top:8px;font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+
+footer.pf{margin-top:80px;padding-top:24px;border-top:1px solid var(--hairline);font:700 10px/1.6 inherit;color:var(--demo-mute);letter-spacing:.05em;text-transform:uppercase;}
+@media(max-width:640px){ .type-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="page-head">
+    <p class="eyebrow">Design system</p>
+    <h1 class="title">Coinbase</h1>
+    <p class="dek">An institutional-grade crypto exchange whose marketing surfaces read like a quietly-confident financial-services brand. The base canvas is pure white; Coinbase Blue (`#0052ff`) is the single brand voltage, used scarcely on primary CTAs, signature glyphs, and inline accent moments. Type runs Coinbase&#x27;s licensed CoinbaseDisplay (display) and CoinbaseSans (body) at modest weights — display sits at weight 400 not 700, signaling editorial calm rather than fintech-bombastic. Page rhythm rotates between bright white sections, soft gray elevation bands, and full-bleed dark editorial heroes (`#0a0b0d`) carrying product-ui mockup cards. Iconography is geometric and minimal; depth comes from card-on-card layering, never decorative shadows.</p>
+    <p class="source-note">Source: getdesign.md/design-md/coinbase/DESIGN.md · rendered as an unofficial static reference for readability, not affiliated with Coinbase.</p>
+  </div>
+  <nav class="toc">
+    <a href="#colors">Colors</a>
+    <a href="#type">Typography</a>
+    <a href="#spacing">Spacing</a>
+    <a href="#radius">Radius</a>
+    <a href="#components">Components</a>
+    <a href="index.html">← All brands</a>
+  </nav>
+
+  <section id="colors">
+    <h2 class="sec-title">Colors</h2>
+    <p class="sec-sub">Every color token in the spec, rendered as a swatch.</p>
+    <div class="swatch-grid"><div class="swatch">
+          <div class="swatch-fill" style="background:#0052ff;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary</div><div class="swatch-hex">#0052ff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#003ecc;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary-active</div><div class="swatch-hex">#003ecc</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#a8b8cc;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary-disabled</div><div class="swatch-hex">#a8b8cc</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0a0b0d;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#0a0b0d</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#5b616e;"></div>
+          <div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#5b616e</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0a0b0d;"></div>
+          <div class="swatch-meta"><div class="swatch-name">body-strong</div><div class="swatch-hex">#0a0b0d</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#7c828a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">muted</div><div class="swatch-hex">#7c828a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#a8acb3;"></div>
+          <div class="swatch-meta"><div class="swatch-name">muted-soft</div><div class="swatch-hex">#a8acb3</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#dee1e6;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#dee1e6</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#eef0f3;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-soft</div><div class="swatch-hex">#eef0f3</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f7f7f7;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-soft</div><div class="swatch-hex">#f7f7f7</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-card</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#eef0f3;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-strong</div><div class="swatch-hex">#eef0f3</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0a0b0d;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-dark</div><div class="swatch-hex">#0a0b0d</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#16181c;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-dark-elevated</div><div class="swatch-hex">#16181c</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-primary</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#a8acb3;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark-soft</div><div class="swatch-hex">#a8acb3</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#05b169;"></div>
+          <div class="swatch-meta"><div class="swatch-name">semantic-up</div><div class="swatch-hex">#05b169</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#cf202f;"></div>
+          <div class="swatch-meta"><div class="swatch-name">semantic-down</div><div class="swatch-hex">#cf202f</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f4b000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">accent-yellow</div><div class="swatch-hex">#f4b000</div></div>
+        </div></div>
+  </section>
+
+  <section id="type">
+    <h2 class="sec-title">Typography</h2>
+    <p class="sec-sub">Each type token rendered at its real size, weight, and line height.</p>
+    <div class="type-row">
+          <div class="type-token">display-mega<span>80px/400/1.0</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:80px;font-weight:400;line-height:1.0;letter-spacing:-2px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Coinbase</p>
+        </div><div class="type-row">
+          <div class="type-token">display-xl<span>64px/400/1.0</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:64px;font-weight:400;line-height:1.0;letter-spacing:-1.6px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">display-lg<span>52px/400/1.0</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:52px;font-weight:400;line-height:1.0;letter-spacing:-1.3px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">display-md<span>44px/400/1.09</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:44px;font-weight:400;line-height:1.09;letter-spacing:-1px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">display-sm<span>36px/400/1.11</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:36px;font-weight:400;line-height:1.11;letter-spacing:-0.5px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">title-lg<span>32px/400/1.13</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:32px;font-weight:400;line-height:1.13;letter-spacing:-0.4px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">title-md<span>18px/600/1.33</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:600;line-height:1.33;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">title-sm<span>16px/600/1.25</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;line-height:1.25;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Coinbase</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md<span>16px/400/1.5</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">body-strong<span>16px/700/1.5</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:700;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm<span>14px/400/1.5</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">caption<span>13px/400/1.5</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:13px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">caption-strong<span>12px/600/1.5</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:12px;font-weight:600;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">number-display<span>18px/500/1.4</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:18px;font-weight:500;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">button<span>16px/600/1.15</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;line-height:1.15;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Coinbase</p>
+        </div><div class="type-row">
+          <div class="type-token">nav-link<span>14px/500/1.4</span></div>
+          <p style="font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div>
+  </section>
+
+  <section id="spacing">
+    <h2 class="sec-title">Spacing</h2>
+    <p class="sec-sub">The spacing scale, drawn to relative width.</p>
+    <div class="scale-row"><span class="scale-label">xxs</span><span class="scale-val">4px</span><div class="scale-bar" style="width:4.0px"></div></div><div class="scale-row"><span class="scale-label">xs</span><span class="scale-val">8px</span><div class="scale-bar" style="width:8.0px"></div></div><div class="scale-row"><span class="scale-label">sm</span><span class="scale-val">12px</span><div class="scale-bar" style="width:12.0px"></div></div><div class="scale-row"><span class="scale-label">base</span><span class="scale-val">16px</span><div class="scale-bar" style="width:16.0px"></div></div><div class="scale-row"><span class="scale-label">md</span><span class="scale-val">20px</span><div class="scale-bar" style="width:20.0px"></div></div><div class="scale-row"><span class="scale-label">lg</span><span class="scale-val">24px</span><div class="scale-bar" style="width:24.0px"></div></div><div class="scale-row"><span class="scale-label">xl</span><span class="scale-val">32px</span><div class="scale-bar" style="width:32.0px"></div></div><div class="scale-row"><span class="scale-label">xxl</span><span class="scale-val">48px</span><div class="scale-bar" style="width:48.0px"></div></div><div class="scale-row"><span class="scale-label">section</span><span class="scale-val">96px</span><div class="scale-bar" style="width:96.0px"></div></div>
+  </section>
+
+  <section id="radius">
+    <h2 class="sec-title">Radius</h2>
+    <p class="sec-sub">Corner-radius tokens applied to a reference box.</p>
+    <div class="radius-grid"><div class="radius-item"><div class="radius-box" style="border-radius:0px"></div>none · 0px</div><div class="radius-item"><div class="radius-box" style="border-radius:4px"></div>xs · 4px</div><div class="radius-item"><div class="radius-box" style="border-radius:8px"></div>sm · 8px</div><div class="radius-item"><div class="radius-box" style="border-radius:12px"></div>md · 12px</div><div class="radius-item"><div class="radius-box" style="border-radius:16px"></div>lg · 16px</div><div class="radius-item"><div class="radius-box" style="border-radius:24px"></div>xl · 24px</div><div class="radius-item"><div class="radius-box" style="border-radius:100px"></div>pill · 100px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>full · 9999px</div></div>
+  </section>
+
+  <section id="components">
+    <h2 class="sec-title">Components</h2>
+    <p class="sec-sub">Documented components with tokens resolved to real color / type / radius / spacing.</p>
+    <div class="comp-grid"><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#0a0b0d;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;height:64px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">top-nav-light</div>
+          <div class="comp-label">top-nav-light</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#0a0b0d;color:#ffffff;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:500;display:inline-block;height:64px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">top-nav-on-dark</div>
+          <div class="comp-label">top-nav-on-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#0052ff;color:#ffffff;border-radius:100px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;display:inline-block;height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-primary</div>
+          <div class="comp-label">button-primary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#003ecc;color:#ffffff;border-radius:100px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary-active</div>
+          <div class="comp-label">button-primary-active</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#a8b8cc;color:#ffffff;border-radius:100px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary-disabled</div>
+          <div class="comp-label">button-primary-disabled</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eef0f3;color:#0a0b0d;border-radius:100px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;display:inline-block;height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-secondary-light</div>
+          <div class="comp-label">button-secondary-light</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#16181c;color:#ffffff;border-radius:100px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;display:inline-block;height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-secondary-dark</div>
+          <div class="comp-label">button-secondary-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#ffffff;border-radius:100px;padding:11px 19px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;display:inline-block;height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-outline-on-dark</div>
+          <div class="comp-label">button-outline-on-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#0052ff;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-tertiary-text</div>
+          <div class="comp-label">button-tertiary-text</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#0052ff;color:#ffffff;border-radius:100px;padding:16px 32px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:600;display:inline-block;height:56px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-pill-cta</div>
+          <div class="comp-label">button-pill-cta</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#0a0b0d;color:#ffffff;border-radius:0px;padding:96px;font-family:Georgia, "Times New Roman", serif;font-size:80px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-band-dark</div>
+          <div class="comp-label">hero-band-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#0a0b0d;border-radius:0px;padding:96px;font-family:Georgia, "Times New Roman", serif;font-size:80px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-band-light</div>
+          <div class="comp-label">hero-band-light</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#16181c;color:#ffffff;border-radius:24px;padding:32px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">product-ui-card-dark</div>
+          <div class="comp-label">product-ui-card-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#0a0b0d;border-radius:24px;padding:32px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">product-ui-card-light</div>
+          <div class="comp-label">product-ui-card-light</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#0a0b0d;border-radius:24px;padding:32px;font-family:Georgia, "Times New Roman", serif;font-size:18px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">feature-card</div>
+          <div class="comp-label">feature-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#0a0b0d;border-radius:0px;padding:16px 0;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">asset-row</div>
+          <div class="comp-label">asset-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#05b169;border-radius:0px;padding:12px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:18px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">price-up-cell</div>
+          <div class="comp-label">price-up-cell</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#cf202f;border-radius:0px;padding:12px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:18px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">price-down-cell</div>
+          <div class="comp-label">price-down-cell</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#0a0b0d;border-radius:24px;padding:32px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">pricing-tier-card</div>
+          <div class="comp-label">pricing-tier-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#0a0b0d;color:#ffffff;border-radius:24px;padding:32px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">pricing-tier-featured</div>
+          <div class="comp-label">pricing-tier-featured</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#0a0b0d;color:#ffffff;border-radius:0px;padding:96px;font-family:Georgia, "Times New Roman", serif;font-size:52px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">cta-band-dark</div>
+          <div class="comp-label">cta-band-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#0a0b0d;border-radius:12px;padding:14px 16px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;height:48px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">text-input</div>
+          <div class="comp-label">text-input</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eef0f3;color:#0a0b0d;border-radius:100px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:16px;font-weight:400;display:inline-block;height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">search-input-pill</div>
+          <div class="comp-label">search-input-pill</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eef0f3;color:#0a0b0d;border-radius:100px;padding:4px 12px;font-family:Georgia, "Times New Roman", serif;font-size:12px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">badge-pill</div>
+          <div class="comp-label">badge-pill</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eef0f3;color:#111111;border-radius:9999px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid rgba(0,0,0,0.06);">asset-icon-circular</div>
+          <div class="comp-label">asset-icon-circular</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#5b616e;border-radius:0px;padding:64px 48px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer-light</div>
+          <div class="comp-label">footer-light</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#5b616e;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer-link</div>
+          <div class="comp-label">footer-link</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#7c828a;border-radius:0px;padding:12px 20px;font-family:Georgia, "Times New Roman", serif;font-size:13px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">legal-band</div>
+          <div class="comp-label">legal-band</div>
+        </div></div>
+  </section>
+
+  <footer class="pf">Coinbase design system analysis · rendered from DESIGN.md · independent, unofficial</footer>
+</div>
+</body>
+</html>

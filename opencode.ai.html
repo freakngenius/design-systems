@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Opencode — DESIGN.md rendered</title>
+<style>
+:root{
+  --demo-ink:#201d1d; --demo-canvas:#fdfcfc; --demo-mute:#646262; --demo-accent:#0f0000;
+  --hairline:#e2e2e2; --hairline-soft:#eeeeee;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--demo-canvas);color:var(--demo-ink);font-family:"Helvetica Neue",Arial,sans-serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 120px;}
+.page-head{margin-bottom:48px;}
+.eyebrow{font:600 12px/1.5 inherit;letter-spacing:.08em;text-transform:uppercase;color:var(--demo-mute);margin:0 0 8px;}
+h1.title{font-family:"SF Mono", "Courier New", monospace;font-size:38px;font-weight:700;line-height:1.5;text-transform:none;margin:0 0 12px;color:var(--demo-ink);}
+.dek{max-width:640px;color:var(--demo-mute);font-size:15px;line-height:1.55;margin:0;}
+.source-note{margin-top:16px;font-size:12px;color:var(--demo-mute);opacity:.7;}
+nav.toc{display:flex;flex-wrap:wrap;gap:0 24px;margin:32px 0 0;padding:16px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+nav.toc a{color:var(--demo-ink);font:500 14px/1.5 inherit;text-decoration:none;border-bottom:1px solid transparent;}
+nav.toc a:hover{border-bottom-color:var(--demo-ink);}
+section{margin-top:48px;}
+h2.sec-title{font-weight:700;font-size:26px;line-height:1.2;margin:0 0 4px;color:var(--demo-ink);}
+p.sec-sub{color:var(--demo-mute);font-size:13px;margin:0 0 20px;}
+.empty{color:var(--demo-mute);font-size:13px;font-style:italic;}
+
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+.swatch{border:1px solid var(--hairline-soft);}
+.swatch-fill{height:64px;}
+.swatch-meta{padding:8px 10px;}
+.swatch-name{font:500 12px/1.5 inherit;}
+.swatch-hex{font:500 11px/1.5 monospace;color:var(--demo-mute);}
+
+.type-row{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--hairline-soft);}
+.type-row:last-child{border-bottom:none;}
+.type-token{font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+.type-token span{display:block;font:400 10px inherit;color:var(--demo-mute);opacity:.7;margin-top:4px;}
+
+.scale-row{display:flex;align-items:center;gap:16px;margin-bottom:8px;font:500 12px monospace;}
+.scale-bar{background:var(--demo-ink);height:14px;}
+.scale-label{width:100px;color:var(--demo-mute);}
+.scale-val{width:60px;}
+
+.radius-grid{display:flex;gap:20px;flex-wrap:wrap;}
+.radius-item{text-align:center;font:500 11px monospace;color:var(--demo-mute);}
+.radius-box{width:64px;height:64px;background:#f2f2f2;border:1px solid var(--hairline);margin-bottom:8px;}
+
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;}
+.comp-cell{text-align:center;}
+.comp-demo{max-width:100%;}
+.comp-label{margin-top:8px;font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+
+footer.pf{margin-top:80px;padding-top:24px;border-top:1px solid var(--hairline);font:700 10px/1.6 inherit;color:var(--demo-mute);letter-spacing:.05em;text-transform:uppercase;}
+@media(max-width:640px){ .type-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="page-head">
+    <p class="eyebrow">Design system</p>
+    <h1 class="title">Opencode</h1>
+    <p class="dek">A terminal-native marketing system rendered entirely in Berkeley Mono — every word on the page, from the hero headline down to the footer fine print, is monospaced. The page itself reads like a manpage or a static-site README: warm cream canvas (`#fdfcfc`), nearly-black ink (`#201d1d`), 4px-radius rectangles for the few interactive elements, and bracketed `[+]`/`[-]` ASCII markers used as bullets. The brand&#x27;s only &quot;visual moment&quot; is a single dark hero card that mocks up the OpenCode TUI itself — black background, monospaced terminal output, ASCII pipe characters, and a wordmark rendered as block-pixel ASCII. Every section sits as a hairline-bordered text block on the cream canvas with no shadows, no gradients, no decorative imagery, and no non-monospaced character anywhere in the system.</p>
+    <p class="source-note">Source: getdesign.md/design-md/opencode.ai/DESIGN.md · rendered as an unofficial static reference for readability, not affiliated with Opencode.</p>
+  </div>
+  <nav class="toc">
+    <a href="#colors">Colors</a>
+    <a href="#type">Typography</a>
+    <a href="#spacing">Spacing</a>
+    <a href="#radius">Radius</a>
+    <a href="#components">Components</a>
+    <a href="index.html">← All brands</a>
+  </nav>
+
+  <section id="colors">
+    <h2 class="sec-title">Colors</h2>
+    <p class="sec-sub">Every color token in the spec, rendered as a swatch.</p>
+    <div class="swatch-grid"><div class="swatch">
+          <div class="swatch-fill" style="background:#201d1d;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary</div><div class="swatch-hex">#201d1d</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fdfcfc;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-primary</div><div class="swatch-hex">#fdfcfc</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#201d1d;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#201d1d</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0f0000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink-deep</div><div class="swatch-hex">#0f0000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#302c2c;"></div>
+          <div class="swatch-meta"><div class="swatch-name">charcoal</div><div class="swatch-hex">#302c2c</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#424245;"></div>
+          <div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#424245</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#646262;"></div>
+          <div class="swatch-meta"><div class="swatch-name">mute</div><div class="swatch-hex">#646262</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#6e6e73;"></div>
+          <div class="swatch-meta"><div class="swatch-name">stone</div><div class="swatch-hex">#6e6e73</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#9a9898;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ash</div><div class="swatch-hex">#9a9898</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fdfcfc;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#fdfcfc</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f8f7f7;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-soft</div><div class="swatch-hex">#f8f7f7</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f1eeee;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-card</div><div class="swatch-hex">#f1eeee</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#201d1d;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-dark</div><div class="swatch-hex">#201d1d</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#302c2c;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-dark-elevated</div><div class="swatch-hex">#302c2c</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:rgba(15,0,0,0.12);"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">rgba(15,0,0,0.12)</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#646262;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-strong</div><div class="swatch-hex">#646262</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#fdfcfc;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark</div><div class="swatch-hex">#fdfcfc</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#9a9898;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark-mute</div><div class="swatch-hex">#9a9898</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#007aff;"></div>
+          <div class="swatch-meta"><div class="swatch-name">accent</div><div class="swatch-hex">#007aff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0056b3;"></div>
+          <div class="swatch-meta"><div class="swatch-name">accent-hover</div><div class="swatch-hex">#0056b3</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#004085;"></div>
+          <div class="swatch-meta"><div class="swatch-name">accent-active</div><div class="swatch-hex">#004085</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ff9f0a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">warning</div><div class="swatch-hex">#ff9f0a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#cc7f08;"></div>
+          <div class="swatch-meta"><div class="swatch-name">warning-hover</div><div class="swatch-hex">#cc7f08</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#995f06;"></div>
+          <div class="swatch-meta"><div class="swatch-name">warning-active</div><div class="swatch-hex">#995f06</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ff3b30;"></div>
+          <div class="swatch-meta"><div class="swatch-name">danger</div><div class="swatch-hex">#ff3b30</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#d70015;"></div>
+          <div class="swatch-meta"><div class="swatch-name">danger-hover</div><div class="swatch-hex">#d70015</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#a50011;"></div>
+          <div class="swatch-meta"><div class="swatch-name">danger-active</div><div class="swatch-hex">#a50011</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#30d158;"></div>
+          <div class="swatch-meta"><div class="swatch-name">success</div><div class="swatch-hex">#30d158</div></div>
+        </div></div>
+  </section>
+
+  <section id="type">
+    <h2 class="sec-title">Typography</h2>
+    <p class="sec-sub">Each type token rendered at its real size, weight, and line height.</p>
+    <div class="type-row">
+          <div class="type-token">display-xl<span>38px/700/1.5</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:38px;font-weight:700;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Opencode</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-md<span>16px/700/1.5</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:700;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md<span>16px/400/1.5</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">body-strong<span>16px/500/1.5</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:500;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">body-tight<span>16px/500/1</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:500;line-height:1;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">link-md<span>16px/400/1.5</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">button-md<span>16px/500/2</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:500;line-height:2;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">caption-md<span>14px/400/2</span></div>
+          <p style="font-family:"SF Mono", "Courier New", monospace;font-size:14px;font-weight:400;line-height:2;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Opencode</p>
+        </div>
+  </section>
+
+  <section id="spacing">
+    <h2 class="sec-title">Spacing</h2>
+    <p class="sec-sub">The spacing scale, drawn to relative width.</p>
+    <div class="scale-row"><span class="scale-label">xxs</span><span class="scale-val">1px</span><div class="scale-bar" style="width:1.0px"></div></div><div class="scale-row"><span class="scale-label">xs</span><span class="scale-val">4px</span><div class="scale-bar" style="width:4.0px"></div></div><div class="scale-row"><span class="scale-label">sm</span><span class="scale-val">8px</span><div class="scale-bar" style="width:8.0px"></div></div><div class="scale-row"><span class="scale-label">md</span><span class="scale-val">12px</span><div class="scale-bar" style="width:12.0px"></div></div><div class="scale-row"><span class="scale-label">lg</span><span class="scale-val">16px</span><div class="scale-bar" style="width:16.0px"></div></div><div class="scale-row"><span class="scale-label">xl</span><span class="scale-val">24px</span><div class="scale-bar" style="width:24.0px"></div></div><div class="scale-row"><span class="scale-label">xxl</span><span class="scale-val">32px</span><div class="scale-bar" style="width:32.0px"></div></div><div class="scale-row"><span class="scale-label">section</span><span class="scale-val">96px</span><div class="scale-bar" style="width:96.0px"></div></div>
+  </section>
+
+  <section id="radius">
+    <h2 class="sec-title">Radius</h2>
+    <p class="sec-sub">Corner-radius tokens applied to a reference box.</p>
+    <div class="radius-grid"><div class="radius-item"><div class="radius-box" style="border-radius:0px"></div>none · 0px</div><div class="radius-item"><div class="radius-box" style="border-radius:4px"></div>sm · 4px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>full · 9999px</div></div>
+  </section>
+
+  <section id="components">
+    <h2 class="sec-title">Components</h2>
+    <p class="sec-sub">Documented components with tokens resolved to real color / type / radius / spacing.</p>
+    <div class="comp-grid"><div class="comp-cell">
+          <div class="comp-demo" style="background:#201d1d;color:#fdfcfc;border-radius:4px;padding:4px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:500;display:inline-block;height:36px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-primary</div>
+          <div class="comp-label">button-primary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#0f0000;color:#fdfcfc;border-radius:4px;padding:12px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary-active</div>
+          <div class="comp-label">button-primary-active</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fdfcfc;color:#201d1d;border-radius:4px;padding:4px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-secondary</div>
+          <div class="comp-label">button-secondary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#646262;border-radius:0px;padding:8px 16px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-tab</div>
+          <div class="comp-label">button-tab</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#201d1d;border-radius:0px;padding:12px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-tab-active</div>
+          <div class="comp-label">button-tab-active</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f1eeee;color:#9a9898;border-radius:4px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-disabled</div>
+          <div class="comp-label">button-disabled</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#201d1d;color:#fdfcfc;border-radius:4px;padding:2px 8px;font-family:"SF Mono", "Courier New", monospace;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">badge-news</div>
+          <div class="comp-label">badge-news</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f8f7f7;color:#201d1d;border-radius:4px;padding:8px 12px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;display:inline-block;height:40px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">text-input</div>
+          <div class="comp-label">text-input</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fdfcfc;color:#201d1d;border-radius:4px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">text-input-focused</div>
+          <div class="comp-label">text-input-focused</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f8f7f7;color:#201d1d;border-radius:4px;padding:12px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">textarea</div>
+          <div class="comp-label">textarea</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f1eeee;color:#201d1d;border-radius:4px;padding:12px 16px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">install-snippet</div>
+          <div class="comp-label">install-snippet</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#201d1d;color:#fdfcfc;border-radius:0px;padding:64px 32px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-tui-mockup</div>
+          <div class="comp-label">hero-tui-mockup</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#302c2c;color:#fdfcfc;border-radius:4px;padding:8px 12px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">tui-prompt-row</div>
+          <div class="comp-label">tui-prompt-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fdfcfc;color:#424245;border-radius:0px;padding:8px 0px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">list-row</div>
+          <div class="comp-label">list-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fdfcfc;color:#201d1d;border-radius:0px;padding:12px 0px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">faq-row</div>
+          <div class="comp-label">faq-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f8f7f7;color:#424245;border-radius:4px;padding:16px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">testimonial-row</div>
+          <div class="comp-label">testimonial-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fdfcfc;color:#424245;border-radius:0px;padding:16px;font-family:"SF Mono", "Courier New", monospace;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">chart-tile</div>
+          <div class="comp-label">chart-tile</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fdfcfc;color:#201d1d;border-radius:0px;padding:12px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:500;display:inline-block;height:56px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">primary-nav</div>
+          <div class="comp-label">primary-nav</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#fdfcfc;color:#424245;border-radius:0px;padding:32px 0px;font-family:"SF Mono", "Courier New", monospace;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer-section</div>
+          <div class="comp-label">footer-section</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#eeeeee;color:#201d1d;border-radius:0px;padding:12px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">link-inline</div>
+          <div class="comp-label">link-inline</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:transparent;color:#201d1d;border-radius:0px;padding:12px 20px;font-family:"SF Mono", "Courier New", monospace;font-size:16px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">badge-section-label</div>
+          <div class="comp-label">badge-section-label</div>
+        </div></div>
+  </section>
+
+  <footer class="pf">Opencode design system analysis · rendered from DESIGN.md · independent, unofficial</footer>
+</div>
+</body>
+</html>

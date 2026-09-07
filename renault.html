@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Renault — DESIGN.md rendered</title>
+<style>
+:root{
+  --demo-ink:#000000; --demo-canvas:#ffffff; --demo-mute:#666666; --demo-accent:#e6d200;
+  --hairline:#e2e2e2; --hairline-soft:#eeeeee;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--demo-canvas);color:var(--demo-ink);font-family:"Helvetica Neue",Arial,sans-serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 120px;}
+.page-head{margin-bottom:48px;}
+.eyebrow{font:600 12px/1.5 inherit;letter-spacing:.08em;text-transform:uppercase;color:var(--demo-mute);margin:0 0 8px;}
+h1.title{font-family:"Helvetica Neue", Arial, sans-serif;font-size:56px;font-weight:700;line-height:0.95;text-transform:none;margin:0 0 12px;color:var(--demo-ink);}
+.dek{max-width:640px;color:var(--demo-mute);font-size:15px;line-height:1.55;margin:0;}
+.source-note{margin-top:16px;font-size:12px;color:var(--demo-mute);opacity:.7;}
+nav.toc{display:flex;flex-wrap:wrap;gap:0 24px;margin:32px 0 0;padding:16px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+nav.toc a{color:var(--demo-ink);font:500 14px/1.5 inherit;text-decoration:none;border-bottom:1px solid transparent;}
+nav.toc a:hover{border-bottom-color:var(--demo-ink);}
+section{margin-top:48px;}
+h2.sec-title{font-weight:700;font-size:26px;line-height:1.2;margin:0 0 4px;color:var(--demo-ink);}
+p.sec-sub{color:var(--demo-mute);font-size:13px;margin:0 0 20px;}
+.empty{color:var(--demo-mute);font-size:13px;font-style:italic;}
+
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+.swatch{border:1px solid var(--hairline-soft);}
+.swatch-fill{height:64px;}
+.swatch-meta{padding:8px 10px;}
+.swatch-name{font:500 12px/1.5 inherit;}
+.swatch-hex{font:500 11px/1.5 monospace;color:var(--demo-mute);}
+
+.type-row{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--hairline-soft);}
+.type-row:last-child{border-bottom:none;}
+.type-token{font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+.type-token span{display:block;font:400 10px inherit;color:var(--demo-mute);opacity:.7;margin-top:4px;}
+
+.scale-row{display:flex;align-items:center;gap:16px;margin-bottom:8px;font:500 12px monospace;}
+.scale-bar{background:var(--demo-ink);height:14px;}
+.scale-label{width:100px;color:var(--demo-mute);}
+.scale-val{width:60px;}
+
+.radius-grid{display:flex;gap:20px;flex-wrap:wrap;}
+.radius-item{text-align:center;font:500 11px monospace;color:var(--demo-mute);}
+.radius-box{width:64px;height:64px;background:#f2f2f2;border:1px solid var(--hairline);margin-bottom:8px;}
+
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;}
+.comp-cell{text-align:center;}
+.comp-demo{max-width:100%;}
+.comp-label{margin-top:8px;font:500 11px monospace;color:var(--demo-mute);word-break:break-word;}
+
+footer.pf{margin-top:80px;padding-top:24px;border-top:1px solid var(--hairline);font:700 10px/1.6 inherit;color:var(--demo-mute);letter-spacing:.05em;text-transform:uppercase;}
+@media(max-width:640px){ .type-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="page-head">
+    <p class="eyebrow">Design system</p>
+    <h1 class="title">Renault</h1>
+    <p class="dek">Renault&#x27;s web presence pairs the freshly-modernised Renault diamond (the 2021 flat-line rhombus mark) with a stark black-and-white canvas, a signature Sunlight Yellow accent, and the proprietary NouvelR display typeface. The system reads as confident, photography-first automotive — large hero cars on neutral or atmospheric backdrops, square-edged or barely-rounded containers, and a small disciplined palette where every coloured element is intentional. Tile grids, full-bleed banners, and a recurring &quot;configurator&quot; surface (white card, yellow accent dots, neutral product chrome) carry the mass-market dealership tone without crossing into luxury.</p>
+    <p class="source-note">Source: getdesign.md/design-md/renault/DESIGN.md · rendered as an unofficial static reference for readability, not affiliated with Renault.</p>
+  </div>
+  <nav class="toc">
+    <a href="#colors">Colors</a>
+    <a href="#type">Typography</a>
+    <a href="#spacing">Spacing</a>
+    <a href="#radius">Radius</a>
+    <a href="#components">Components</a>
+    <a href="index.html">← All brands</a>
+  </nav>
+
+  <section id="colors">
+    <h2 class="sec-title">Colors</h2>
+    <p class="sec-sub">Every color token in the spec, rendered as a swatch.</p>
+    <div class="swatch-grid"><div class="swatch">
+          <div class="swatch-fill" style="background:#ffed00;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary</div><div class="swatch-hex">#ffed00</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#e6d200;"></div>
+          <div class="swatch-meta"><div class="swatch-name">primary-deep</div><div class="swatch-hex">#e6d200</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#000000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-primary</div><div class="swatch-hex">#000000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#000000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ink</div><div class="swatch-hex">#000000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#222222;"></div>
+          <div class="swatch-meta"><div class="swatch-name">body</div><div class="swatch-hex">#222222</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#333333;"></div>
+          <div class="swatch-meta"><div class="swatch-name">charcoal</div><div class="swatch-hex">#333333</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#666666;"></div>
+          <div class="swatch-meta"><div class="swatch-name">mute</div><div class="swatch-hex">#666666</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#8a8a8a;"></div>
+          <div class="swatch-meta"><div class="swatch-name">ash</div><div class="swatch-hex">#8a8a8a</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#c4c4c4;"></div>
+          <div class="swatch-meta"><div class="swatch-name">stone</div><div class="swatch-hex">#c4c4c4</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:rgba(255,255,255,0.72);"></div>
+          <div class="swatch-meta"><div class="swatch-name">on-dark-mute</div><div class="swatch-hex">rgba(255,255,255,0.72)</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">canvas</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f7f7f7;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-soft</div><div class="swatch-hex">#f7f7f7</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffffff;border-bottom:1px solid #e5e5e5;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-card</div><div class="swatch-hex">#ffffff</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#000000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-dark</div><div class="swatch-hex">#000000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#111111;"></div>
+          <div class="swatch-meta"><div class="swatch-name">surface-deep</div><div class="swatch-hex">#111111</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f2f2f2;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline</div><div class="swatch-hex">#f2f2f2</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#000000;"></div>
+          <div class="swatch-meta"><div class="swatch-name">hairline-strong</div><div class="swatch-hex">#000000</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:rgba(255,255,255,0.16);"></div>
+          <div class="swatch-meta"><div class="swatch-name">divider-dark</div><div class="swatch-hex">rgba(255,255,255,0.16)</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#ffed00;"></div>
+          <div class="swatch-meta"><div class="swatch-name">badge-new</div><div class="swatch-hex">#ffed00</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#0000ee;"></div>
+          <div class="swatch-meta"><div class="swatch-name">link</div><div class="swatch-hex">#0000ee</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#be6464;"></div>
+          <div class="swatch-meta"><div class="swatch-name">error</div><div class="swatch-hex">#be6464</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#f0ad4e;"></div>
+          <div class="swatch-meta"><div class="swatch-name">warning</div><div class="swatch-hex">#f0ad4e</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#8dc572;"></div>
+          <div class="swatch-meta"><div class="swatch-name">success</div><div class="swatch-hex">#8dc572</div></div>
+        </div><div class="swatch">
+          <div class="swatch-fill" style="background:#337ab7;"></div>
+          <div class="swatch-meta"><div class="swatch-name">info</div><div class="swatch-hex">#337ab7</div></div>
+        </div></div>
+  </section>
+
+  <section id="type">
+    <h2 class="sec-title">Typography</h2>
+    <p class="sec-sub">Each type token rendered at its real size, weight, and line height.</p>
+    <div class="type-row">
+          <div class="type-token">display-xl<span>56px/700/0.95</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:56px;font-weight:700;line-height:0.95;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Renault</p>
+        </div><div class="type-row">
+          <div class="type-token">display-lg<span>40px/700/0.95</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:40px;font-weight:700;line-height:0.95;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">display-md<span>32px/700/0.95</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:32px;font-weight:700;line-height:0.95;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-lg<span>24px/700/0.95</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:24px;font-weight:700;line-height:0.95;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-md<span>20px/700/0.95</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:20px;font-weight:700;line-height:0.95;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">heading-sm<span>18px/700/1.0</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:18px;font-weight:700;line-height:1.0;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">subtitle<span>19.2px/600/1.3</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:19.2px;font-weight:600;line-height:1.3;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">body-lg<span>18px/400/1.5</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:18px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Renault</p>
+        </div><div class="type-row">
+          <div class="type-token">body-md<span>16px/400/1.4</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:16px;font-weight:400;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Product name and price</p>
+        </div><div class="type-row">
+          <div class="type-token">body-sm<span>14px/400/1.57</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:400;line-height:1.57;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Get started for free</p>
+        </div><div class="type-row">
+          <div class="type-token">button-lg<span>16px/700/1.0</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:16px;font-weight:700;line-height:1.0;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Section heading</p>
+        </div><div class="type-row">
+          <div class="type-token">button-md<span>14.4px/700/1.0</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:14.4px;font-weight:700;line-height:1.0;letter-spacing:0.144px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Body copy that explains a feature in plain language.</p>
+        </div><div class="type-row">
+          <div class="type-token">button-sm<span>13px/600/1.2</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:600;line-height:1.2;letter-spacing:0.13px;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Learn more</p>
+        </div><div class="type-row">
+          <div class="type-token">caption<span>12px/400/1.4</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:12px;font-weight:400;line-height:1.4;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Caption label</p>
+        </div><div class="type-row">
+          <div class="type-token">overline<span>10px/700/1.45</span></div>
+          <p style="font-family:"Helvetica Neue", Arial, sans-serif;font-size:10px;font-weight:700;line-height:1.45;letter-spacing:0;text-transform:none;text-decoration:none;margin:0;color:var(--demo-ink);">Renault</p>
+        </div>
+  </section>
+
+  <section id="spacing">
+    <h2 class="sec-title">Spacing</h2>
+    <p class="sec-sub">The spacing scale, drawn to relative width.</p>
+    <div class="scale-row"><span class="scale-label">xxs</span><span class="scale-val">4px</span><div class="scale-bar" style="width:4.0px"></div></div><div class="scale-row"><span class="scale-label">xs</span><span class="scale-val">8px</span><div class="scale-bar" style="width:8.0px"></div></div><div class="scale-row"><span class="scale-label">sm</span><span class="scale-val">12px</span><div class="scale-bar" style="width:12.0px"></div></div><div class="scale-row"><span class="scale-label">md</span><span class="scale-val">16px</span><div class="scale-bar" style="width:16.0px"></div></div><div class="scale-row"><span class="scale-label">lg</span><span class="scale-val">20px</span><div class="scale-bar" style="width:20.0px"></div></div><div class="scale-row"><span class="scale-label">xl</span><span class="scale-val">24px</span><div class="scale-bar" style="width:24.0px"></div></div><div class="scale-row"><span class="scale-label">xxl</span><span class="scale-val">32px</span><div class="scale-bar" style="width:32.0px"></div></div><div class="scale-row"><span class="scale-label">xxxl</span><span class="scale-val">40px</span><div class="scale-bar" style="width:40.0px"></div></div><div class="scale-row"><span class="scale-label">section</span><span class="scale-val">80px</span><div class="scale-bar" style="width:80.0px"></div></div>
+  </section>
+
+  <section id="radius">
+    <h2 class="sec-title">Radius</h2>
+    <p class="sec-sub">Corner-radius tokens applied to a reference box.</p>
+    <div class="radius-grid"><div class="radius-item"><div class="radius-box" style="border-radius:0px"></div>none · 0px</div><div class="radius-item"><div class="radius-box" style="border-radius:2px"></div>xs · 2px</div><div class="radius-item"><div class="radius-box" style="border-radius:3px"></div>sm · 3px</div><div class="radius-item"><div class="radius-box" style="border-radius:4px"></div>md · 4px</div><div class="radius-item"><div class="radius-box" style="border-radius:46px"></div>pill · 46px</div><div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div>full · 9999px</div></div>
+  </section>
+
+  <section id="components">
+    <h2 class="sec-title">Components</h2>
+    <p class="sec-sub">Documented components with tokens resolved to real color / type / radius / spacing.</p>
+    <div class="comp-grid"><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffed00;color:#000000;border-radius:2px;padding:14px 24px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14.4px;font-weight:700;display:inline-block;height:48px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-primary</div>
+          <div class="comp-label">button-primary</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#e6d200;color:#000000;border-radius:2px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14.4px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-primary-pressed</div>
+          <div class="comp-label">button-primary-pressed</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:2px;padding:14px 24px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14.4px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-secondary-dark</div>
+          <div class="comp-label">button-secondary-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:2px;padding:13px 23px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14.4px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-outline-dark</div>
+          <div class="comp-label">button-outline-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:2px;padding:13px 23px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14.4px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">button-outline-light</div>
+          <div class="comp-label">button-outline-light</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:46px;padding:8px 16px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:600;display:inline-block;height:36px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">button-pill</div>
+          <div class="comp-label">button-pill</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:2px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid rgba(0,0,0,0.06);">button-icon-square</div>
+          <div class="comp-label">button-icon-square</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:0px;padding:12px 16px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:16px;font-weight:400;display:inline-block;height:48px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">text-input</div>
+          <div class="comp-label">text-input</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:0px;padding:0;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">hero-banner</div>
+          <div class="comp-label">hero-banner</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:0px;padding:32px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:24px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">promo-tile-light</div>
+          <div class="comp-label">promo-tile-light</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:0px;padding:32px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:24px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">promo-tile-dark</div>
+          <div class="comp-label">promo-tile-dark</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffed00;color:#000000;border-radius:0px;padding:32px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:24px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">promo-tile-yellow</div>
+          <div class="comp-label">promo-tile-yellow</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:0px;padding:0;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;border:1px solid rgba(0,0,0,0.06);">vehicle-card</div>
+          <div class="comp-label">vehicle-card</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:0px;padding:24px 0;font-family:"Helvetica Neue", Arial, sans-serif;font-size:16px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">configurator-row</div>
+          <div class="comp-label">configurator-row</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#f7f7f7;color:#111111;border-radius:9999px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:500;display:inline-block;width:56px;height:56px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid rgba(0,0,0,0.06);">configurator-swatch</div>
+          <div class="comp-label">configurator-swatch</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffed00;color:#000000;border-radius:9999px;padding:6px 14px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14.4px;font-weight:700;display:inline-block;border:1px solid rgba(0,0,0,0.06);">badge-new</div>
+          <div class="comp-label">badge-new</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:0px;padding:12px 20px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14.4px;font-weight:700;display:inline-block;height:60px;display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,0.06);">nav-bar</div>
+          <div class="comp-label">nav-bar</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#ffffff;color:#000000;border-radius:46px;padding:8px 16px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:13px;font-weight:600;display:inline-block;border:1px solid rgba(0,0,0,0.06);">sub-nav-pill</div>
+          <div class="comp-label">sub-nav-pill</div>
+        </div><div class="comp-cell">
+          <div class="comp-demo" style="background:#000000;color:#ffffff;border-radius:0px;padding:64px 24px;font-family:"Helvetica Neue", Arial, sans-serif;font-size:14px;font-weight:400;display:inline-block;border:1px solid rgba(0,0,0,0.06);">footer</div>
+          <div class="comp-label">footer</div>
+        </div></div>
+  </section>
+
+  <footer class="pf">Renault design system analysis · rendered from DESIGN.md · independent, unofficial</footer>
+</div>
+</body>
+</html>
